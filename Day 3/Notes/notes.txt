@@ -1,0 +1,35 @@
+Absolute path vs Relative path:
+
+absolute path valid for everyone (to send letters)
+relative path kisi ek jagah se valid
+
+nexus: day1, day2 => Third.png, day3=> xyz.png
+
+if in day 3 folder,
+img src="xyz.png" not recommended
+img src="./xyz.png" 
+to go one level up i.e to nexus, use 2 dots, img src="../Day2/Third.png"
+
+if there was a folder above nexus too, so would have used ../.. to go in it
+
+to go 1 level below, use /
+to go 1 level above, use ../
+
+this was relative address
+
+mac : ls
+windows : dir(directory)
+
+cd : change drive
+cd .. : to go one level down/up
+
+C:\Users\Anuj\Desktop\NEXUS\NEXUS\Day 2 absolute path
+
+mac uses / arrow
+
+root directory in windows : C
+in mac : /
+
+absolute path is wrt root directory
+
+We can not use absolute path in the img src tag to access the image, if client and server are different machines, you do not wanna provide server with full access to your machine.
