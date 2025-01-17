@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Example</title>
+</head>
+
+<body>
+    <h1>Student Marks</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Math</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Science</td>
+            <td>90</td>
+        </tr>
+    </table>
+
+
+    <br>
+    <!-- 
+
+Basic Structure of an HTML Table
+<table>: This is the main container for the table.
+<tr>: Defines a row in the table.
+<th>: Defines a header cell (usually bold and centered by default).
+<td>: Defines a standard data cell. -->
+
+    <table border="1">
+        <caption>Student Grades</caption>
+        <!-- Adding Captions: Use the <caption> tag to add a title or description for the table. -->
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Grade</th>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Subjects</th>
+            <!-- Merging Cells:
+
+    colspan: Merge multiple columns into one.
+    rowspan: Merge multiple rows into one. -->
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Math</td>
+            <td>Science</td>
+        </tr>
+    </table>
+    
+</body>
+
+</html>

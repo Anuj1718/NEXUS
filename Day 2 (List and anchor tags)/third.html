@@ -1,0 +1,94 @@
+<ol type="I">
+    <li>
+        List Item 1
+        <ol type="a"> 
+            <!-- attribute -->
+            <li>Nested Item 1.1</li>
+            <li>Nested Item 1.2</li>
+        </ol>
+    </li>
+
+    <li>
+        List Item 2
+        <ol>
+            <li>Nested Item 2.1</li>
+            <li>
+                Nested Item 2.2
+                <ul style="list-style-type: circle">
+                    <!-- attribute -->
+                    <li>Nested Item 2.2.1</li>
+                    <li>
+                        Nested Item 2.2.2
+                        <ul>
+                            <li>Nested Item 2.2.2.1</li>
+                            <li>Nested Item 2.2.2.2</li>
+                        </ul>
+                    </li>
+
+                    <li>Nested Item 2.2.3</li>
+                </ul>
+            </li>
+            <li>Nested Item 2.3</li>
+        </ol>
+    </li>
+
+    <li>List Item 3
+        <ul style="list-style-type: disc;">
+            <li>List Item 3.1</li>
+            <li>List Item 3.2</li>
+            <li>List Item 3.3</li>
+        </ul>
+    </li>
+</ol>
+
+
+    <h1>Nested List Home Work</h1>
+    
+    <ul>
+        <li>A</li>
+        <li>B
+            <ol>
+                <li>B1</li>
+                <li>B2</li>
+                <li>B3
+                    <ul style="list-style-type: square;">
+                        <!-- attribute -->
+                        <li>B3a</li>
+                        <li>B3b</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+
+        <li>C
+            <ol>
+                <li>C1</li>
+                <li>C2</li>
+                <li>C3</li>
+            </ol>
+        </li>
+    </ul>
+
+<!-- 
+    In HTML, `<ol type="a">` and `<ul style="list-style-type: circle">` are used to customize the appearance of ordered and unordered lists:
+
+        ### **`<ol type="a">`**
+        - This creates an **ordered list** where the list items are labeled using **lowercase alphabetic characters** (e.g., `a, b, c, ...`).
+        - The `type` attribute in `<ol>` determines the numbering style for the list items.
+          - Common values for `type`:
+            - `"1"`: Numeric (default)
+            - `"a"`: Lowercase alphabet (e.g., `a, b, c, ...`)
+            - `"A"`: Uppercase alphabet (e.g., `A, B, C, ...`)
+            - `"i"`: Lowercase Roman numerals (e.g., `i, ii, iii, ...`)
+            - `"I"`: Uppercase Roman numerals (e.g., `I, II, III, ...`)
+        
+        ### **`<ul style="list-style-type: circle">`**
+        - This creates an **unordered list** where the list items are marked with **circle bullets** instead of the default solid disc bullets.
+        - The `style="list-style-type: circle"` specifies the bullet style for the unordered list.
+          - Common values for `list-style-type`:
+            - `disc` (default): Solid round bullets
+            - `circle`: Hollow circle bullets
+            - `square`: Solid square bullets
+            - `none`: No bullets
+        
+        These attributes are used to enhance the hierarchy or visual clarity of the nested list structure. -->

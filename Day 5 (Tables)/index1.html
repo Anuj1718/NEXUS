@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table border="1">
+    <!-- Grouping the header content -->
+    <thead>
+      <!-- Defining individual header cells -->
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+
+    <tbody>
+       <!-- Table body with regular rows and data cells -->
+      <tr>
+        <td>Rohit</td>
+        <td>27</td>
+        <td>10000</td>
+      </tr>
+      <tr>
+        <td>Mohit</td>
+        <td>22</td>
+        <td>20000</td>
+      </tr>
+      <tr>
+        <td>Riya</td>
+        <td>23</td>
+        <td>6000</td>
+      </tr>
+    </tbody>
+  </table>
+
+<hr>
+<!-- ROWSPAN AND COLUMNSPAN-->
+  <table border="10">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Priya</td>
+        <td>Sharma</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>Arun</td>
+        <td colspan="2">Singh</td> 
+        
+      </tr>
+      <tr>
+        <td>Sam</td>
+        <td>Watson</td>
+        <td>32</td>
+        
+      </tr>
+    </tbody>
+  </table>
+  
+</body>
+</html>
+
+<!-- 
+
+Basic Structure of an HTML Table
+<table>: This is the main container for the table.
+<tr>: Defines a row in the table.
+<th>: Defines a header cell (usually bold and centered by default).
+<td>: Defines a standard data cell. -->
+
+  <!-- Key Differences:
+
+<thead>: Groups all the header rows (typically one row) in a table. It is not used to define individual cells but organizes the overall header structure.
+<th>: Represents individual header cells within the header row and is used to define the content for each column or row label.
+
+When to Use Each:
+Use <thead> when you want to group all header rows together, making it easier for styling, scripting, and accessibility.
+Use <th> when you want to define a header cell for each column or row in your table.
+
+  Yes, <thead> is primarily a semantic element in HTML.
+
+    It doesn't directly affect the visual presentation or styling of the table but serves a structural and logical purpose. -->
+
+    <!-- Similary, we can write tbody and tfoot -->
