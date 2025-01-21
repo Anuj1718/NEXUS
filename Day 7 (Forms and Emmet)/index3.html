@@ -23,13 +23,20 @@
     <br>
     <br>
     <label>Gender:</label>
+    <!-- on clicking gender, i do not have to go anywhere, hence no need of for -->
     <input type="radio" id="male" name="gender" value="Male">
     <label for="male">Male</label>
-    <input type="radio" id="female" name="gender">
+    <input type="radio" id="female" name="gender" value="Female">
     <label for="female">Female</label>
-    <input type="radio" id="other" name="gender">
+    <input type="radio" id="other" name="gender" value="Other">
     <label for="other">Other</label>
-
+    <!-- as we chose the same name field, hence we can choose only one radio -->
+    <br>
+    <br>
+    <input type="checkbox" id="term" name="agree">
+    <label for="term">I agree to the terms and conditions</label>
+    <br><br>
+    <button>Register</button>
   </form>
   
 </body>

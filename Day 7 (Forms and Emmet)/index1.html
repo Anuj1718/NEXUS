@@ -1,0 +1,113 @@
+<!-- EMMET in HTML-->
+<!--Nested Creation 
+
+child >
+sibling +
+multiplication *
+-->
+
+<!-- Emmet (Shortcuts):  https://docs.emmet.io/cheat-sheet/
+
+ul>li*5 
+p>p>p
+nav>ul>li*5
+
+3 Unordered list and 5 list elements in each list : (ul>li*5)*3
+
+guess the output p>nav>(ol>li*4)*3 
+
+this was nested creation.
+
+if you want together or side by side creation, use +, eg) p+nav -->
+
+
+
+<!-- 
+<p>
+  <nav>
+    <ol>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+    </ol>
+    <ol>
+      <li>E</li>
+      <li>F</li>
+      <li>G</li>
+      <li>H</li>
+    </ol>
+    <ol>
+      <li>I</li>
+      <li>J</li>
+      <li>K</li>
+      <li>L</li>
+    </ol>
+  </nav>
+</p>
+
+
+<!- h1{Hello Coder Army } -->
+
+<!--
+<h1>Hello Coder Army</h1>
+-->
+
+<!-- p{"hi"}  -->
+
+<!-- . symbol class ke saath hoga -->
+
+<!-- # symbol ID ke saath hoga -->
+<!-- p.first 
+p.first{oye} 
+h2# 
+h2#second{oyeee} -->
+
+<!-- 
+h4#tempo.first ==> tempo wil be id and first will be class
+h3.first.third.fifth ---=> multiple classes
+-->
+
+<!-- Output : 
+<h4 id="tempo" class="first">Rajdeep</h4>
+<h3 class="first third fifth"></h3>
+
+
+-->
+
+
+
+
+
+
+
+<!--HTML form -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <label for="first">Name</label> 
+    <!-- user ko bharna kya hai wo batayega label -->
+    <input type="text" id="first" required name="fname" placeholder="Enter Your Name">
+    <!-- on clicking on name, the cursor should automatically go to the box, you need 'for' for this. the name of for in label should be same as the id name in input -->
+     <!-- required means field is necessary
+    on submitting form, data submitted will go to server side jaha uska naam 'fname' hoga -->
+    <!-- value = "Random" -->
+
+    <br>
+    <label for="second">Age</label>
+    <input type="number" min="10" max="100" id="second" name="AgeofStudent" >
+    <br>
+    <button type="submit">submit</button>
+  </form>
+  
+</body>
+</html> 
+
