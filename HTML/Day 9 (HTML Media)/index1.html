@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!--Audio file kaise attach kar sakte hai-->
+  <!-- this is first method  -->
+  <!-- <audio src="./check.mp3" controls ></audio>
+   "controls" to show audio file and control it
+
+  <!-Second method of showing audio advantages -->
+  <!-- <audio controls >
+    <source src="./Jaadugar.mp3">
+    <source src="./check.mp3">
+    Songs are not loaded
+    if first song is not loaded, then second will be loaded. if both are not loaded just in case, write "songs are not loaded !" 
+  </audio> -->
+
+  <!--Video  file kaise attach kar sakte hai-->
+  <!-- First method of playing video  -->
+  <!-- <br><br>
+  <video src="./hawa.MP4" height="400" width="250" controls></video>
+
+  <--Second method advantages -->
+  <!-- <br><br> -->
+  <!-- <video controls height="400" width="250" autoplay muted >
+    <source src="./hawa.MP4" type="video/MP4">
+    <source src="./hawa.MP4" type="video/MP4">
+    Video is not played !
+    If we not write type, it will still work but for better habit.
+  </video> -> --> 
+
+
+  <!--Youtube video ko  kaise attach kar sakte hai-->
+  <iframe src="../Day 8 (Forms Advance)/index4hw.html" frameborder="0"></iframe>
+  <!-- you can add different websites data too using iframe, not all websites allow it though  -->
+  <br>
+  <!-- https://www.youtube.com/watch?v=y3OOaXrFy-Q&list=PLQEaRBV9gAFu4ovJ41PywklqI7IyXwr01&t=1s  -->
+   <!-- this would not work, take youtube video id i.e v="" and write embed  -->
+  <iframe src="https://www.youtube.com/embed/watch?v=BCHJ9YizW7w&list=PLQEaRBV9gAFu4ovJ41PywklqI7IyXwr01" frameborder="0" allowfullscreen></iframe>
+  <!-- In the `<iframe>` tag you provided:
+
+    1. **`frameborder="0"`**  
+       - This attribute controls the border around the embedded frame.  
+       - A value of `0` means **no border** will be displayed.  
+       - Although `frameborder` is an older attribute (deprecated in HTML5), some browsers still support it.
+    
+    2. **`allowfullscreen`**  
+       - This attribute allows the embedded content (in this case, a YouTube video) to be played in **full-screen mode** when the user clicks the fullscreen button.  
+       - If omitted, the fullscreen option might not be available.  
+       - It does not need a value; just including it enables the feature. -->
+  
+       <!-- iframe does not have "controls" as youtube does not wanna give full access (like they wanna show ads), also not all websites support youtube videos to be embedded or their own  videos to be displayed. -->
+</body>
+</html>

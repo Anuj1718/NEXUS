@@ -8,18 +8,24 @@
 </head>
 <body>
   <h1>Employee Details Form</h1>
+
+  <form action="">
+
   <br><br>
   <label for="name">Full Name :</label>
   <input type="text" id="name" name="fname" value="" required placeholder="Enter your full name">
   <br><br>
+
   <label for="email">E-mail:</label>
   <input required type="email" id="email" name="Email" value="" placeholder="Enter your email address">
 
   <br><br>
-
-  <label for="number">Phone Number:</label>
-  <input type="tel" id="number" name="phone number" value="" required placeholder="Enter your phone number">
-
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone_number" 
+         placeholder="Enter your phone number" 
+         required pattern="[0-9]{10,15}" maxlength="15">
+         <!-- [0-9] → Matches any digit (0 to 9).
+          {10,15} → Ensures that the number has between 10 and 15 digits (inclusive). -->
   <br><br>
 
   <label>Gender:</label>
@@ -29,6 +35,7 @@
   <label for="female">Female</label>
   <input type="radio" id="other" name="gender" value="other" required >
   <!--HERE name="" AND value="" PLAY AN IMPORTANT ROLE-->
+  <!-- As we will send value in backend else if we click on male, it will send "on" value -->
   <label for="other">Other</label>
 
   <br><br>
@@ -41,9 +48,11 @@
   <label for="Dep" placeholder="Select your Department">Department :</label>
   <select name="Department" id="Dep">
     <option value="" disabled selected>Select your department</option>
+    <!-- diabled selected so that we cannot choose "Select your department"  -->
     <option value="CSE">CSE</option>
     <option value="IT">IT</option>
-    <option value="ECE">ECE</option>
+    <option value="ECE1">ECE</option> 
+    <!-- value ECE1 will go in backend  -->
     <option value="EE">EE</option>
     <option value="CE">CE</option>
     <option value="other">Other</option>
@@ -52,6 +61,6 @@
 <br><br>
 <button type="submit">Submit</button>
 
-
+</form>
 </body>
 </html>

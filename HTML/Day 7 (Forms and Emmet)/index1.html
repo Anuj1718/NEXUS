@@ -57,7 +57,8 @@ if you want together or side by side creation, use +, eg) p+nav -->
 
 <!-- . symbol class ke saath hoga -->
 
-<!-- # symbol ID ke saath hoga -->
+<!-- # symbol ID ke saath hoga --> 
+ <!-- remember by hash id -->
 <!-- p.first 
 p.first{oye} 
 h2# 
@@ -93,16 +94,20 @@ h3.first.third.fifth ---=> multiple classes
 </head>
 <body>
   <form action="">
-    <label for="first">Name</label> 
+     <!-- action, we will discuss later  -->
+      <!-- first write input then label  -->
+       <!-- input se structure, dabba, gola ayega  -->
+    <label for="first">Name:</label> 
     <!-- user ko bharna kya hai wo batayega label -->
     <input type="text" id="first" required name="fname" placeholder="Enter Your Name">
     <!-- on clicking on name, the cursor should automatically go to the box, you need 'for' for this. the name of for in label should be same as the id name in input -->
-     <!-- required means field is necessary
-    on submitting form, data submitted will go to server side jaha uska naam 'fname' hoga -->
-    <!-- value = "Random" -->
+     <!-- required means field is necessary.
+      name should be unique  .
+    on submitting form, data submitted will go to server side jaha uska naam 'fname' hoga. This is beacause to not create conflict between similar fields, hence name field should be unique.
+     value = "Random"   this value will be shown by default :  -->
 
     <br>
-    <label for="second">Age</label>
+    <label for="second">Age:</label>
     <input type="number" min="10" max="100" id="second" name="AgeofStudent" >
     <br>
     <button type="submit">submit</button>
@@ -110,4 +115,5 @@ h3.first.third.fifth ---=> multiple classes
   
 </body>
 </html> 
+
 
