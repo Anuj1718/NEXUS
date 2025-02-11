@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Day1</title>
+  <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+  
+<h1>Hello Coder Army </h1>
+<ul >
+  <li>Milk</li>
+  <li>Egg</li>
+  <li>Whey </li>
+  <li>Corn Flakes</li>
+</ul>
+<p class="first">Aaj sab badhiya hai , aur batao kya chal rha hai</p>
+<h2>baaki sab badhiya hai</h2>
+<h3 class="first">Kaise Ho !</h3>
+<p class="first" id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ducimus deserunt illum veniam eum aperiam voluptatem rem quidem, consequatur eos.</p>
+<div class="first">hello boss </div>
+<h4 class="second">Money Honey</h4>
+<h5 class="second">Hello Bhaiya</h5>
+  
+</body>
+</html>
+<!-- 
+CSS Selectors :
+
+1) Element Selector h1{}
+2) Class Selector .first{}
+3) ID Selector #first {}
+4) Select by Attributes eg p[draggable="true"]{} or/and div[contenteditable = "true"]{}
+5) Universal selector (selects all) *{}
+6) Grouping selector h1,h2,h3,#third {}
+7) descendant selector (ancestor descendant) div p{}
+8) child selector (parent > child) div > p {}
+9) ID Selector with Class Selector #id.class{}
+
+
+
+Here’s a breakdown of the **CSS Selectors** you listed, with explanations and examples:  
+
+---
+
+### **1) Element Selector**  
+- Targets all elements of a specific type (HTML tag).  
+- **Example:**  
+
+  p {
+    color: blue;
+  }
+
+  <p>This is a paragraph with blue text.</p>
+  
+
+---
+
+### **2) Class Selector (`.`)**  
+- Targets elements with a specific class.  
+- **Example:**  
+
+  .myClass {
+    font-size: 18px;
+  }
+  ```
+  
+  <div class="myClass">This text is 18px.</div
+
+---
+
+### **3) ID Selector (`#`)**  
+- Targets an element with a specific ID (unique).  
+- **Example:**  
+
+  #myId {
+    background-color: yellow;
+  
+  <div id="myId">This has a yellow background.</div
+
+---
+
+### **4) Attribute Selector (`p[draggable] div[contenteditable="true"]`)**  
+- Selects elements with specific attributes.  
+- **Example:**  
+
+  p[draggable] {
+    border: 2px dashed red;
+  }
+  div[contenteditable="true"] {
+    outline: 2px solid blue;
+  
+  <p draggable="true">This paragraph is draggable.</p>
+  <div contenteditable="true">You can edit this text.</div
+
+---
+
+### **5) Universal Selector (`*`)**  
+- Selects all elements in an HTML document.  
+- **Example:**  
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+
+---
+
+### **6) Grouping Selector (`h1, h2, h3`)**  
+- Applies the same style to multiple elements.  
+- **Example:**  
+
+  h1, h2, h3 {
+    color: green;
+  }
+  ```
+  
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  ```
+
+---
+
+### **7) Descendant Selector (`div p`)**  
+- Selects all `<p>` elements **inside** a `<div>`.  
+- **Example:**  
+
+  div p {
+  color: red;
+}
+
+<div>
+  <p>✅ This paragraph is red.</p>
+  <section>
+    <p>✅ This nested paragraph is also red.</p>
+  </section>
+</div>
+
+
+---
+
+### **8) Child Selector (`div > p`)**  
+- Selects only **direct child** `<p>` elements inside `<div>`.  
+- **Example:**  
+
+div > p {
+  color: blue;
+}
+
+  
+<div>
+  <p>✅ This paragraph is blue.</p>
+  <section>
+    <p>❌ This nested paragraph is NOT affected.</p>
+  </section>
+</div>
+
+
+Use descendant (div p) when styling all nested elements.
+Use child (div > p) when styling only direct children.
+
+### **9) ID Selector with Class Selector (`#id.class`)**  
+- Selects an element that has both a specific **ID** and **Class**.  
+- **Example:**  
+
+  #myBox.special {
+    background-color: purple;
+  
+  <div id="myBox" class="special">This has a purple background.</div>
+  <div id="myBox">This is NOT affected (missing the class).</div>
+  ```
+
+### **Summary Table**
+| **Selector** | **Syntax** | **Description** |
+|-------------|------------|----------------|
+| **Element Selector** | `p {}` | Selects all `<p>` elements |
+| **Class Selector** | `.className {}` | Selects elements with a specific class |
+| **ID Selector** | `#id {}` | Selects an element with a specific ID |
+| **Attribute Selector** | `p[draggable] {}` | Selects elements with an attribute |
+| **Universal Selector** | `* {}` | Selects all elements |
+| **Grouping Selector** | `h1, h2, h3 {}` | Styles multiple elements together |
+| **Descendant Selector** | `div p {}` | Selects `<p>` inside `<div>` |
+| **Child Selector** | `div > p {}` | Selects **direct** `<p>` children of `<div>` |
+| **ID & Class Selector** | `#id.class {}` | Selects an element with both a specific **ID** and **Class** |
+
+This covers your listed selectors with proper explanations. 🚀 -->

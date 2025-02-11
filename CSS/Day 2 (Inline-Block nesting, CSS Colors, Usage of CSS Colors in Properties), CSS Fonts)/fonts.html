@@ -1,0 +1,136 @@
+1) font-family:
+
+In CSS, the `font-family` property specifies a prioritized list of font family names and/or generic family names for an element. This allows the browser to select the first available font in the list, ensuring that your content is displayed as intended even if some fonts aren't available on the user's system. citeturn0search0
+
+
+font-family: [family-name, generic-family];
+
+
+- **`family-name`**: The name of a specific font family, such as `Arial`, `Times New Roman`, or `Courier New`. If the font name contains spaces or special characters, it should be enclosed in quotes.
+
+- **`generic-family`**: A generic font family that acts as a fallback if none of the specified fonts are available. Common generic families include:
+
+  - **`serif`**: Fonts with small lines or embellishments at the ends of characters.
+
+  - **`sans-serif`**: Fonts without serifs; generally have a cleaner appearance.
+
+  - **`monospace`**: Fonts in which all characters have the same width.
+
+  - **`cursive`**: Fonts that mimic handwritten or script styles.
+
+  - **`fantasy`**: Decorative or playful fonts.
+
+**Example:**
+
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+
+In this example, the browser will attempt to use "Helvetica Neue" first. If it's not available, it will try Arial. If neither font is available, it will default to a generic sans-serif font. citeturn0search2
+
+**Best Practices:**
+
+- **Font Stacks**: Always specify a list of fonts, from the most preferred to the least, ending with a generic family. This ensures that if a particular font isn't available, the browser can fall back to the next option.
+
+- **Quoting Font Names**: If a font name contains spaces, digits, or special characters, enclose it in quotes to ensure proper rendering. For example: `font-family: "Times New Roman", Times, serif;`.
+
+- **Web-Safe Fonts**: While specifying fonts, consider using web-safe fonts that are commonly available across different systems to ensure consistency.
+
+2) font-size:
+
+
+In CSS, the `font-size` property determines the size of the text within an element. Choosing the appropriate font size enhances readability and ensures a consistent user experience across different devices and browsers.
+
+**Syntax:**
+
+
+selector {
+  font-size: value;
+}
+
+
+**Values:**
+
+1. **Absolute-size Keywords:**
+   - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
+   - These keywords set the font size to predefined sizes based on the browser's default settings.
+
+2. **Relative-size Keywords:**
+   - `smaller`, `larger`
+   - Adjusts the font size relative to the parent element's font size.
+
+3. **Length Units:**
+   - **Pixels (`px`):** Defines a fixed size. For example, `16px` sets the font size to 16 pixels.
+   - **Ems (`em`):** Relative to the font size of the parent element. For instance, `1.5em` is 1.5 times the size of the parent element's font. (usually, body is parent as it has tags inside it but parents depend on child)
+   - **Rems (`rem`):** Relative to the font size of the root (`<html>`) element. For example, `1rem` equals the root element's font size.
+    by default, font size of head and body = 16 pixels, depend on browser though, different for mozilla.
+
+    go in inspect element and see in "style" and "computed" the actual font size.
+
+4. **Percentages:**
+   - Sets the font size relative to the parent element's font size. For example, `150%` makes the font size 1.5 times that of the parent.
+
+**Examples:**
+
+
+/* Using absolute-size keyword */
+p {
+  font-size: medium;
+}
+
+/* Using relative-size keyword */
+h1 {
+  font-size: larger;
+}
+
+/* Using pixels */
+div {
+  font-size: 20px;
+}
+
+/* Using ems */
+span {
+  font-size: 1.2em;
+}
+
+/* Using rems */
+body {
+  font-size: 1rem;
+}
+
+/* Using percentage */
+li {
+  font-size: 110%;
+}
+
+
+**Best Practices:**
+
+- **Accessibility:** Avoid using fixed units like pixels (`px`) excessively, as they can hinder users' ability to resize text, especially those with visual impairments. Relative units like `em` or `rem` are more adaptable.
+
+- **Consistency:** Using `rem` units ensures consistent scaling across components, as they reference the root element's font size.
+
+- **Responsive Design:** Combine relative units with media queries to adjust font sizes for different screen sizes, enhancing readability on various devices.
+
+For a comprehensive guide on CSS font sizing, you can refer to the MDN Web Docs on [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size). 
+
+1080p(1920 * 1080)
+1920 is width, 1080 is height
+1920 horziontal pixels, 1080p vertical pixels.
+
+16:9 is aspect ratio
+
+16/9 * 1080 = 1920
+
+
+1 pixel = 1/96 inch is wrong. The physical size of a pixel in inches depends on the display's pixel density, commonly measured in pixels per inch (PPI). This means that the size of a pixel varies across different devices. For instance, a standard computer monitor might have a PPI of 96, meaning each pixel is approximately 0.0104 inches in size. In contrast, modern smartphones often have much higher PPIs, resulting in smaller pixels. Therefore, without knowing the specific PPI of a device, it's not possible to definitively state the physical size of a pixel in inch
+pixel length will depend on device, if screen is bigger, pixels take bigger size, hence clarity is not seen, appears blurry.
+
+for 720p, it is 16/9 *720 = 1280
+
+1280 * 720 
+650 * 480
+
+hence, if we open 480p in bigger screens, it leads to bigger pixels leading to less clarity. 

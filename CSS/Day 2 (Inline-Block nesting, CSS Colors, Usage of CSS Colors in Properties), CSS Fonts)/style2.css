@@ -1,0 +1,47 @@
+
+body{
+  background-image: url(./pexels-ferarcosn-190819.jpg);
+  background-size: cover;
+  /* can add image as background color  */
+  background-color: blueviolet;
+  
+  font-family:cursive; 
+  /* aakhri wala papa hota h font family m ,
+   vo bhi na chala toh browser ka default */
+  font-size: 20px;  
+  /* yeh units m size de skte h ----> 2 em , 3em , 2cm , 10px , 20 px */
+
+  
+}
+
+h1{
+color: bisque;
+
+}
+
+/* 
+
+In CSS, the `background-size` and `background-repeat` properties control how background images are displayed within an element.
+
+**`background-size`** determines the dimensions of the background image:
+
+- **`auto`**: Displays the image at its original size.
+- **`cover`**: Scales the image to cover the entire element, possibly cropping it to maintain aspect ratio.
+- **`contain`**: Scales the image to fit within the element without cropping, ensuring the entire image is visible.
+- **Specific dimensions**: You can specify exact sizes using units like pixels (`px`), percentages (`%`), or other CSS units. For example:
+
+
+  background-size: 100px 50px; /* width: 100px, height: 50px */
+  /* background-size: 50% auto;   width: 50% of the element's width, height: auto */
+
+/* 
+**`background-repeat`** controls how the background image repeats within the element:
+
+- **`repeat`**: Repeats the image both horizontally and vertically (default behavior).
+- **`repeat-x`**: Repeats the image horizontally only.
+- **`repeat-y`**: Repeats the image vertically only.
+- **`no-repeat`**: Displays the image once without repeating.
+- **`space`**: Repeats the image as many times as possible without clipping, distributing any extra space evenly between the images.
+- **`round`**: Repeats the image as many times as possible without clipping, and if there's extra space, it scales the images slightly to fit perfectly without gaps.
+
+By combining these properties, you can control the appearance and behavior of background images to achieve the desired design effect. */

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 2 CSS</title>
+  <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+
+  <!-- Har koi kisi ka child nahi ban sakta -->
+  
+  
+  <p>
+    <div>Hello Coders</div>
+  </p>
+  <!-- in this case, p>div or p div aint working  -->
+  <div>
+    <p>Hello Coders</p>
+  </div>
+<!-- in this case, it is working  -->
+
+</body>
+</html>
+
+
+<!-- Below are the general rules regarding the content allowed inside a paragraph element (<p>) and how browsers handle disallowed content:
+
+  - **Permitted Content of a `<p>` Element:**  
+    - According to the HTML specification (and as noted on MDN), a `<p>` element’s content model is defined as *phrasing content*.  
+    - *Phrasing content* includes text and inline-level elements (for example, `<span>`, `<a>`, `<em>`, `<strong>`, `<img>`, and similar tags) that mark up text at the word or character level.
+  
+  - **Disallowed Content in a `<p>` Element:**  
+    - Block-level elements (such as `<div>`, `<ul>`, `<ol>`, `<h1>–<h6>`, etc.) are not allowed as children of a `<p>` element.  
+    - If you attempt to place a block-level element inside a `<p>`, the HTML parser will automatically close the `<p>` tag before encountering that block-level element. This means the block-level element ends up outside the `<p>`, even if your source code appears nested.
+  
+  - **CSS Selector Implications:**  
+    - Because of the automatic closing of the `<p>` element, any CSS rules like `p > div` or `p div` will not work as expected. There will be no `<div>` inside the `<p>` in the Document Object Model (DOM), so such selectors won’t match.
+    - In contrast, using a structure such as:
+    
+      <div>
+        <p>Hello Coders</p>
+      </div>
+
+      is valid because a `<div>` (which can contain block-level elements) properly wraps the `<p>`.
+  
+  - **Key Takeaway:**  
+    - **Always remember:** The `<p>` element is intended solely for text and inline (phrasing) content. Use block-level containers like `<div>` for grouping larger sections or blocks of content.  
+    - When invalid nesting occurs (for example, `<p><div>...</div></p>`), the browser’s auto-correction alters the DOM structure, leading to CSS selectors that no longer match your intended elements.
+  
+  These rules are set by the HTML standard to ensure that content is semantically correct and that browsers render pages consistently.  
+    
+Similarly like p tag, it is for h1-h6 tags
+
+Inline elements are allowed as child in block elements, but not block elements in block tags like p, h1-h6
+
+Elements like <div>, <section>, and <article> are flexible containers that can hold both block-level and inline elements. The restriction is specific to certain elements (like <p> and headings) whose content models are designed for text and inline content only.
+
+  In list, i cannot have any child other than li as block element, then later on inside li, i can have. 
+
+  The HTML specification requires that the direct children of a <ul> (unordered list) or <ol> (ordered list) be <li> elements. This means that you should not include other tags (like <div>, <p>, or <span>) as direct children of these list containers.
+
+    If you need to include other types of content (such as a <div> or <p>), you must first wrap that content in an <li>. For example:
+
+      <ul>
+        <li>
+          <div>This div is inside an li, which is valid.</div>
+        </li>
+        <li>
+          <p>This paragraph is inside an li, which is valid.</p>
+        </li>
+      </ul>
+
+
+
+      Summary of the Nesting  Rules
+Block Elements → Inline Elements:
+Block-level elements (like <div>, <section>, <p>—when permitted, as in the case of <div>) can include inline elements.
+
+Inline Elements → Inline Elements:
+Inline elements are allowed to contain other inline elements and text.
+
+Inline Elements → Block Elements:
+As a general rule, block-level elements should not be placed directly inside inline elements (with the rare HTML5 exception of the <a> element’s transparent content model).
+
+Special Cases:
+Certain block-level elements (like <p> and headings) are specifically designed to hold only inline (phrasing) content and will cause the browser to auto-correct the markup if you try to insert a block-level element inside them.
+
+These guidelines help maintain valid HTML markup and ensure that browsers render content consistently. -->

@@ -1,0 +1,22 @@
+/* Select By Descendent */
+section p{
+  color: blue;
+}
+/* 
+This applies to all <p> elements that are inside a <section>, no matter how deeply nested they are.
+Both first and second <p> elements will turn blue. */
+
+
+
+/* Select by Child */
+section > p{
+  color: blueviolet;
+}
+
+/* This only applies to <p> elements that are direct children of a <section>.
+It does not apply to <p> elements inside <div> elements. */
+/* Since only the second <p> is a direct child of <section>, it turns blueviolet, while the first <p> remains blue (due to the previous rule). */
+
+
+
+/* Sir gave summary at end of video, can watch it directly  */

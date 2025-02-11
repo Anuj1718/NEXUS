@@ -1,0 +1,51 @@
+/*Element Selector */
+
+h1{
+  color: aquamarine;
+  background-color: black;
+}
+ul{
+  color: blueviolet;
+  background-color: black;
+}
+
+/* Select by CLASS NAME  */
+/* we need to apply "." first */
+
+.first{
+  color: aquamarine;
+  background-color: black;
+
+}
+
+.second{
+  color: blueviolet;
+  background-color: black;
+}
+
+/* Select by ID(UNIQUE HOTI H) */
+
+/* "#" use krna hai */
+
+#third{
+  color: chartreuse;
+  background-color: chocolate;
+
+}
+
+/*    */
+body{
+  background-color: aqua;
+}
+/* Affects only elements inside the <body> tag */
+
+
+
+
+*{
+  color: blue;
+}
+/* saare tags ko select krna ho toh " * = UNIVERSAL SELECTOR" use kro   */
+/* 
+Use body {} when styling only visible page content (text, background, etc.).
+Use * {} for global resets (e.g., removing margins/padding from all elements). */

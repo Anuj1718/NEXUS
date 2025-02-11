@@ -1,0 +1,11 @@
+p > div{
+  color: aquamarine;
+}
+p div{
+  color: aquamarine;
+}
+/* if we do directly by "div", it will work 
+  */
+div>p{
+  color: aqua;
+}
