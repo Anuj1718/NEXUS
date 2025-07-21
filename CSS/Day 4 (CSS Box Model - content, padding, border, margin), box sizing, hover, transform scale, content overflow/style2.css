@@ -1,0 +1,43 @@
+h1{
+  border: 10px green solid;
+  overflow: auto;
+  padding: 10px 25px 40px 60px;
+  border: 1px 25px 40px 60px gray ;
+  margin: 10px 20px 40px 80px;
+
+
+}
+
+h2{
+  border: 10px black solid;
+  padding: 10px 25px 40px 60px;
+  border: 1px 25px 40px 60px  ;
+  margin: 10px 20px 40px 80px;
+  box-sizing: border-box;
+  
+}
+
+
+.name{
+  
+    border: 20px black solid;
+    padding: 100px 25px 40px 60px;
+    border: 100px 250px 400px 600px  ;
+    margin: 100px 20px 400px 80p0x;
+    box-sizing: border-content;
+
+
+}
+
+/* Margin in CSS is used to create space outside an element’s border, separating it from other elements or the edges of its container. This helps control layout, improve readability, and organize content visually by preventing elements from touching each other or the container’s edges 
+
+margin: top right bottom left;
+
+
+1 value: all sides (e.g., margin: 10px;)
+
+2 values: top & bottom, right & left (e.g., margin: 10px 20px;)
+
+3 values: top, right & left, bottom (e.g., margin: 10px 20px 30px;)
+
+4 values: top, right, bottom, left (e.g., margin: 10px 20px 30px 40px;) */

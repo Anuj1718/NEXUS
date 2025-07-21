@@ -1,0 +1,51 @@
+h1
+{
+  background-color: aqua;
+  width: 300px; 
+  /* by default h1 takes 100% width of the parent element as it is a block level element */
+  height: 200px;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: blue;
+  overflow: auto;
+
+/* There is no direct border-height property. The height of the border is determined by the height of the element it surrounds.  */
+
+
+
+  /* SHORTCUTS ---> to perform all above operations*/
+
+  border: 5px brown solid;
+
+}
+
+/* when we have two option for border width:-->
+  
+in case of two   |--> 1)top and bottom 2) left and right
+in case of three |--> 1) top 2) right and left 3)bottom
+in case of 4     |--> top -->right-->bottom-->left    ===> CLOCKWISE DIRECTION MAI CHALTI HAI*/
+h2
+{
+  background-color: brown;
+}
+
+
+h3{
+  background-color: plum;
+  border-left-width: 10px;
+  border-color: green;
+  border-left-style: solid;
+}
+
+
+p
+{
+  background-color: tomato;
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+  padding: 20px;
+
+
+}

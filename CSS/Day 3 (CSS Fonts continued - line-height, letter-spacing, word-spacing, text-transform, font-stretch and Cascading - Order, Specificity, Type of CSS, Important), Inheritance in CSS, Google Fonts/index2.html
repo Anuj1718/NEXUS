@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    h1{
+      background-color: darkgoldenrod;
+    }
+  </style>
+
+  <link rel="stylesheet" href="./style2.css">
+
+
+</head>
+<body>
+
+
+  <h1  class="first_class" id="first_id" draggable="true">Hello Coder Army</h1>
+
+  <h2>Name of Students</h2>
+  <ul>
+
+    <li>Riya</li>
+    <li>Kush</li>
+    <li>Raj</li>
+    <li>Raman</li>
+
+  </ul>
+
+  
+</body>
+</html>
+
+<!-- 
+# Cascading in CSS
+
+Cascading in CSS determines which styles are applied to an element when multiple rules could apply. It is governed by three main concepts: **order of appearance**, **specificity**, and **origin/type** of the style. The `!important` rule can also override the cascade.
+
+## 1. Order of Appearance
+
+When two or more rules have the same specificity and origin, the one that appears last in the CSS (or HTML) will be applied. This is called the "source order."
+
+## 2. Specificity
+
+Specificity is a ranking system that determines which CSS rule is applied by browsers when multiple rules could match the same element. The higher the specificity, the more likely the rule is to be applied.
+
+### Specificity Hierarchy
+
+From highest to lowest:
+
+| Selector Type           | Example                | Specificity Value |
+|------------------------ |-----------------------|------------------|
+| Inline Styles           | ``   | 1000             |
+| IDs                     | `#header`             | 100              |
+| Attributes & Classes    | `.menu`, `[type="text"]` | 10           |
+| Elements & Pseudo-elements | `div`, `h1`, `::before` | 1         |
+| Universal Selector      | `*`                    | 0                |
+
+#### Selector Types Explained
+
+- **ID Selector (`#id`)**: Targets elements with a specific ID. Highest among selectors.
+- **Attribute Selector (`[attr=value]`)**: Targets elements with a specific attribute.
+- **Class Selector (`.class`)**: Targets elements with a specific class.
+- **Child Selector (`A > B`)**: Targets direct children. Specificity is based on the selectors used.
+- **Descendant Selector (`A B`)**: Targets all descendants. Specificity is based on the selectors used.
+- **Element Selector (`div`, `p`)**: Targets elements by tag name.
+- **Grouped Selector (`A, B`)**: Applies the rule to multiple selectors; each is evaluated separately.
+
+Order of CSS specificity from highest to lowest, including child and descendant selectors:
+
+Inline styles > ID selectors > Class selectors = Attribute selectors = Pseudo-classes > Child selectors = Descendant selectors (specificity is the sum of their parts) > Element selectors = Pseudo-elements > Universal selector
+
+Child (A > B) and descendant (A B) selectors do not have their own specificity level; their specificity is the sum of the selectors they contain. For example, #id .class > div is calculated as ID + class + element
+
+## 3. Type of CSS (Origin)
+
+CSS can be applied in three ways, each with a different priority:
+
+| Type         | Description                                         | Priority    |
+|--------------|-----------------------------------------------------|-------------|
+| Inline       | Style attribute in HTML element                     | Highest     |
+| Internal     | `` tag in the HTML ``                               | Medium      |
+| External     | Linked CSS file (``)                                 | Lowest      |
+
+nternal and external CSS have equal priority in terms of the cascade, and whichever comes last in the HTML document will take precedence if their specificity is the same. The order is:
+
+Inline styles > Internal or external CSS (whichever is last in the HTML) > Browser default styles
+
+So, between internal (<style>) and external (<link>) CSS, the one that appears later in the document will override the earlier one if they have the same specificity and target the same element
+
+
+Perplexity : Yes, my earlier statement that internal CSS always has higher priority than external CSS was an oversimplification. In reality, internal and external CSS have equal priority, and the one that comes last in the HTML document will take precedence if their specificity is the same. So if the <link> to an external CSS file appears after the <style> block (internal CSS), the external CSS rules will override the internal ones, and vice versa. This behavior is due to the source order rule in CSS cascading, not the type of stylesheet alone.
+*Note: Browser (user agent) and user stylesheets also participate in the cascade, but author stylesheets usually override them unless marked as `!important`.*
+
+## 4. The `!important` Rule
+
+Adding `!important` to a CSS rule overrides all other declarations, regardless of specificity or origin, except when another `!important` rule with higher specificity exists.
+
+```css
+p {
+  color: red !important;
+}
+```
+This will make all `` elements red, even if other rules would normally override it.
+
+## Summary Table
+
+| Factor           | Highest Priority            | Example                |
+|------------------|----------------------------|------------------------|
+| Order            | Last defined rule           | Later rule in CSS      |
+| Specificity      | Inline > ID > Class/Attr > Element | `style` > `#id` > `.class` > `div` |
+| Type             | Inline > Internal > External|                         |
+| `!important`     | Overrides all (if present)  | `color: red !important;`|
+
+## Key Takeaways
+
+- **Cascading** decides which CSS rule wins when multiple rules apply.
+- **Specificity** is calculated based on selector types.
+- **Order** matters when specificity is equal.
+- **Type** (inline, internal, external) affects which rules take precedence.
+- **`!important`** can override all other rules, but should be used sparingly for maintainability. -->
+<!-- 
+Priority :
+
+important > type > specificity > order -->
+
+
+<!-- **Inheritance** in CSS is the mechanism by which certain properties set on a parent element are automatically passed down to its child elements. This helps keep stylesheets concise and consistent.
+
+- **Inherited properties** include text-related properties like `color`, `font-family`, `font-size`, and `line-height`. For example, if you set `color: green;` on a ``, any `` or `` inside that `` will also be green unless otherwise specified[5][8].
+- **Non-inherited properties** (like `border`, `margin`, `padding`, `background`) do not pass their values down to children by default[2][8].
+
+### How inheritance works
+- If a property is *inherited* and not explicitly set on a child, the child gets its value from the parent[5][8].
+- If a property is *not inherited*, the child uses its default value unless you set it directly.
+
+### Forcing inheritance
+You can force any property to inherit its value from the parent by using the `inherit` keyword, even for properties that are not normally inherited:
+
+```css
+.child {
+  border-color: inherit;
+}
+```
+This makes `.child`'s border color the same as its parent’s text color, for example[1][7].
+
+### Special keywords for inheritance control
+- **inherit**: Forces the property to take the parent's value.
+- **initial**: Sets the property to its default value.
+- **unset**: Resets the property to its inherited value if it normally inherits, otherwise to its initial value.
+- **revert**: Resets the property to the browser's default styling.
+- **revert-layer**: Resets to the value established in a previous cascade layer[1].
+
+### Direct targeting vs. inheritance
+If a property is set directly on an element, it overrides any inherited value, regardless of the specificity of the inherited rule[6].
+
+### Summary
+- **Inheritance** keeps CSS DRY by passing down certain properties from parent to child.
+- Not all properties inherit by default; mainly text and font properties do[5][8].
+- You can control inheritance with special keywords like `inherit`, `initial`, and `unset`[1][5]. -->
+

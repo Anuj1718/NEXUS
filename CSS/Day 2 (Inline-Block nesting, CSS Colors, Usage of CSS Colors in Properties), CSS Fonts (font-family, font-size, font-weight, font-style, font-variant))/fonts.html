@@ -1,0 +1,297 @@
+1) font-family:
+
+In CSS, the `font-family` property specifies a prioritized list of font family names and/or generic family names for an element. This allows the browser to select the first available font in the list, ensuring that your content is displayed as intended even if some fonts aren't available on the user's system. citeturn0search0
+
+
+font-family: [family-name, generic-family];
+
+
+- **`family-name`**: The name of a specific font family, such as `Arial`, `Times New Roman`, or `Courier New`. If the font name contains spaces or special characters, it should be enclosed in quotes.
+
+- **`generic-family`**: A generic font family that acts as a fallback if none of the specified fonts are available. Common generic families include:
+
+  - **`serif`**: Fonts with small lines or embellishments at the ends of characters.
+9
+  - **`sans-serif`**: Fonts without serifs; generally have a cleaner appearance.
+
+  - **`monospace`**: Fonts in which all characters have the same width.
+
+  - **`cursive`**: Fonts that mimic handwritten or script styles.
+
+  - **`fantasy`**: Decorative or playful fonts.
+
+**Example:**
+
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+
+In this example, the browser will attempt to use "Helvetica Neue" first. If it's not available, it will try Arial. If neither font is available, it will default to a generic sans-serif font.
+
+**Best Practices:**
+
+- **Font Stacks**: Always specify a list of fonts, from the most preferred to the least, ending with a generic family. This ensures that if a particular font isn't available, the browser can fall back to the next option.
+
+- **Quoting Font Names**: If a font name contains spaces, digits, or special characters, enclose it in quotes to ensure proper rendering. For example: `font-family: "Times New Roman", Times, serif;`.
+
+- **Web-Safe Fonts**: While specifying fonts, consider using web-safe fonts that are commonly available across different systems to ensure consistency.
+
+2) font-size:
+
+
+In CSS, the `font-size` property determines the size of the text within an element. Choosing the appropriate font size enhances readability and ensures a consistent user experience across different devices and browsers.
+
+**Syntax:**
+
+
+selector {
+  font-size: value;
+}
+
+
+**Values:**
+
+1. **Absolute-size Keywords:**
+   - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
+   - These keywords set the font size to predefined sizes based on the browser's default settings.
+
+2. **Relative-size Keywords:**
+   - `smaller`, `larger`
+   - Adjusts the font size relative to the parent element's font size.
+
+3. **Length Units:**
+   - **Pixels (`px`):** Defines a fixed size. For example, `16px` sets the font size to 16 pixels.
+   - **Ems (`em`):** Relative to the font size of the parent element. For instance, `1.5em` is 1.5 times the size of the parent element's font. (usually, body is parent as it has tags inside it but parents depend on child)
+   - **Rems (`rem`):** Relative to the font size of the root (`<html>`) element. For example, `1rem` equals the root element's font size.
+    by default, font size of head and body = 16 pixels, depend on browser though, different for mozilla.
+
+    go in inspect element and see in "style" and "computed" the actual font size.
+
+4. **Percentages:**
+   - Sets the font size relative to the parent element's font size. For example, `150%` makes the font size 1.5 times that of the parent.
+
+5. **Viewport Units:**
+   - `vw` (viewport width) and `vh` (viewport height) can also be used, where `1vw` is 1% of the viewport's width and `1vh` is 1% of the viewport's height.
+   
+viewport width and height are the dimensions of the visible area of a web page in a browser window. They can be influenced by the device's screen size, resolution, and zoom level.
+Viewport width is the width of the browser window, while viewport height is the height. These dimensions can change based on the device being used (e.g., desktop, tablet, mobile) and how the user has resized or zoomed the browser window.
+example, on a desktop browser, the viewport might be 1200 pixels wide and 800 pixels tall. On a mobile device, it could be 375 pixels wide and 667 pixels tall.
+Viewport width 20w (20% of the viewport width) and viewport height 20h (20% of the viewport height) are relative units that adjust based on the size of the viewport. For example, if the viewport is 1000 pixels wide, 20w would be 200 pixels. Similarly, if the viewport is 800 pixels tall, 20h would be 160 pixels. These units are useful for responsive design, allowing elements to scale proportionally with the viewport size.
+
+**Examples:**
+
+
+/* Using absolute-size keyword */
+p {
+  font-size: medium;
+}
+
+/* Using relative-size keyword */
+h1 {
+  font-size: larger;
+}
+
+/* Using pixels */
+div {
+  font-size: 20px;
+}
+
+/* Using ems */
+span {
+  font-size: 1.2em;
+}
+
+/* Using rems */
+body {
+  font-size: 1rem;
+}
+
+/* Using percentage */
+li {
+  font-size: 110%;
+}
+
+
+**Best Practices:**
+
+- **Accessibility:** Avoid using fixed units like pixels (`px`) excessively, as they can hinder users' ability to resize text, especially those with visual impairments. Relative units like `em` or `rem` are more adaptable.
+
+- **Consistency:** Using `rem` units ensures consistent scaling across components, as they reference the root element's font size.
+
+- **Responsive Design:** Combine relative units with media queries to adjust font sizes for different screen sizes, enhancing readability on various devices.
+
+For a comprehensive guide on CSS font sizing, you can refer to the MDN Web Docs on [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size). 
+
+1080p(1920 * 1080)
+1920 is width, 1080 is height
+1920 horziontal pixels, 1080p vertical pixels.
+
+16:9 is aspect ratio
+
+16/9 * 1080 = 1920
+
+
+1 pixel = 1/96 inch is wrong. The physical size of a pixel in inches depends on the display's pixel density, commonly measured in pixels per inch (PPI). This means that the size of a pixel varies across different devices. For instance, a standard computer monitor might have a PPI of 96, meaning each pixel is approximately 0.0104 inches in size. In contrast, modern smartphones often have much higher PPIs, resulting in smaller pixels. Therefore, without knowing the specific PPI of a device, it's not possible to definitively state the physical size of a pixel in inch
+pixel length will depend on device, if screen is bigger, pixels take bigger size, hence clarity is not seen, appears blurry.
+
+for 720p, it is 16/9 *720 = 1280
+
+1280 * 720 
+650 * 480
+
+hence, if we open 480p in bigger screens, it leads to bigger pixels leading to less clarity. 
+
+<!-- 3) font-weight: -->  
+In CSS, the `font-weight` property specifies the weight (or boldness) of the font. It allows you to control how thick or thin the characters appear in your text.
+**Syntax:**
+selector {
+  font-weight: value;
+}
+**Values:**
+1. **Keyword Values:**
+   - `normal`: The default font weight (usually equivalent to 400).
+   - `bold`: A bold font weight (usually equivalent to 700).
+   - `bolder`: A bolder weight than the parent element's font weight.
+   - `lighter`: A lighter weight than the parent element's font weight.
+2. **Numeric Values:**
+   - Numeric values range from 100 to 900, where: 
+      - `100` is the lightest weight.
+      - `400` is equivalent to `normal`.
+      - `700` is equivalent to `bold`.
+      - Values in between (e.g., `200`, `300`, `500`, `600`, `800`, `900`) can be used for more granular control over font weight, depending on the font family.
+**Examples:**
+/* Using keyword values */
+p {
+  font-weight: normal; /* Default weight */
+}
+/* Using bold */
+h1 {
+  font-weight: bold; /* Bold text */
+} 
+/* Using numeric values */
+h2 {
+  font-weight: 600; /* Semi-bold text */
+}
+/* Using lighter and bolder */
+p {
+  font-weight: lighter; /* Lighter than the parent element */
+}
+**Best Practices:**
+- **Consistency:** Use consistent font weights across your design to maintain a cohesive look. Avoid using too many different weights, as it can create visual clutter.
+- **Readability:** Ensure that the font weight you choose enhances readability. For body text, a normal or slightly bold weight is often best, while headings can use bolder weights for emphasis.     
+
+4) font-style:
+In CSS, the `font-style` property is used to specify the style of the font, such as whether it is normal, italic, or oblique. This property allows you to add emphasis to text, making it visually distinct from the surrounding content.   
+**Syntax:**
+selector {
+  font-style: value;
+} 
+**Values:**
+1. **Keyword Values:**      
+    - `normal`: The default font style, which displays text in a standard manner without any special emphasis.
+    - `italic`: Displays text in an italicized style, which is typically slanted to the right.
+    - `oblique`: Similar to italic, but may not be specifically designed as an italic font. It usually slants the text to the right but can appear less stylized than true italics.
+2. **Inherited Values:**
+    - `inherit`: Inherits the font style from the parent element.
+    - `initial`: Sets the property to its default value (normal).
+    - `unset`: Resets the property to its natural value, which is either inherited or initial depending on the context.
+**Examples:**
+/* Using normal font style */ 
+p {
+  font-style: normal; /* Standard text */
+}
+/* Using italic font style */
+h1 {
+  font-style: italic; /* Italicized heading */
+} 
+/* Using oblique font style */
+h2 {
+  font-style: oblique; /* Oblique heading */
+}
+/* Using inherit */
+span {
+  font-style: inherit; /* Inherits the font style from the parent element */
+}
+/* Using initial */
+div {
+  font-style: initial; /* Resets to the default font style (normal) */
+}
+/* Using unset */
+blockquote {
+  font-style: unset; /* Resets to the natural value, which is normal if not inherited */
+}
+**Best Practices:**
+- **Emphasis:** Use `italic` or `oblique` sparingly for emphasis,
+as overuse can reduce readability. Reserve these styles for specific cases, such as quotes or citations.
+- **Consistency:** Maintain a consistent use of font styles across your design. Mixing too many styles can create visual confusion.
+- **Accessibility:** Ensure that italicized or oblique text remains legible, especially for users with visual impairments. Some fonts may not render well in italic or oblique styles, so test your design across different devices and browsers.
+5) font-variant: (HW)
+In CSS, the `font-variant` property is used to control the use of small-caps, ligatures, and other typographic features in a font. This property allows for enhanced text styling, particularly in professional or artistic contexts.
+**Syntax:** 
+selector {
+  font-variant: value;
+}
+**Values:**
+1. **Keyword Values:**
+    - `normal`: The default font variant, which displays text in its standard form without any special features.
+    - `small-caps`: Displays text in small capital letters, where lowercase letters are rendered as smaller uppercase letters.
+    - `all-small-caps`: Similar to `small-caps`, but all letters, including uppercase ones, are rendered as small capitals.
+    - `petite-caps`: Displays text in petite capitals, which are smaller versions of uppercase letters.
+    - `all-petite-caps`: Similar to `petite-caps`, but all letters are rendered as petite capitals.
+    - `unicase`: Displays text in a mixed case where both uppercase and lowercase letters are used, but with a consistent height.
+    - `titling-caps`: Displays text in titling capitals, which are typically larger and more decorative uppercase letters used for titles or headings.
+2. **Ligatures:**
+    - `common-ligatures`: Enables common ligatures in the font, such as "fi" and "fl".
+    - `no-common-ligatures`: Disables common ligatures.
+    - `discretionary-ligatures`: Enables discretionary ligatures, which are stylistic variations of certain letter combinations.
+    - `no-discretionary-ligatures`: Disables discretionary ligatures.
+    - `historical-ligatures`: Enables historical ligatures, which are older forms of letter combinations.
+    - `no-historical-ligatures`: Disables historical ligatures.
+3. **Contextual Alternates:**
+    - `contextual`: Enables contextual alternates, which allow the font to adjust letterforms based on their surrounding characters.
+    - `no-contextual`: Disables contextual alternates.
+**Examples:**
+/* Using normal font variant */ 
+p {
+  font-variant: normal; /* Standard text */
+}
+/* Using small-caps font variant */
+h1 {
+  font-variant: small-caps; /* Small capital letters */
+}
+/* Using all-small-caps font variant */
+h2 {
+  font-variant: all-small-caps; /* All letters in small capitals */
+}
+/* Using petite-caps font variant */
+h3 {
+  font-variant: petite-caps; /* Petite capital letters */
+}
+/* Using all-petite-caps font variant */
+h4 {
+  font-variant: all-petite-caps; /* All letters in petite capitals */
+}
+/* Using unicase font variant */
+p {
+  font-variant: unicase; /* Mixed case with consistent height */
+}
+
+Ligatures Explanation:
+<p><strong>Ligatures:</strong> In typography, ligatures are special characters that combine two or more letters into a single glyph to improve the appearance and readability of text. Common examples include "fi", "fl", and "ff". Ligatures are often used to prevent awkward collisions between letters and to create a more visually pleasing flow in certain fonts.</p>
+
+Petite Capitals Explanation:
+<p><strong>Petite Capitals:</strong> Petite capitals are a typographic feature similar to small capitals, but they are even shorter in height. They are designed to match the x-height of lowercase letters, making them more harmonious when used within text. Petite capitals are mainly available in professional or advanced typefaces that support this feature.</p>
+
+**Best Practices:**
+- **Typography:** Use `font-variant` to enhance the typographic quality of your text  
+
+without overwhelming the reader. Small-caps and ligatures can add elegance to headings or important text.
+- **Readability:** Ensure that the use of small-caps or ligatures does not hinder readability. Test your design across different devices and browsers to ensure that the text remains legible.
+- **Font Support:** Not all fonts support all `font-variant` features. Always check the font documentation to see which features are available and how they render in different browsers.   
+- **Accessibility:** Be cautious when using small-caps or ligatures, as they may not be easily readable for all users, especially those with visual impairments. Consider providing alternatives or ensuring that the text remains legible at various sizes.
+- **Performance:** Using too many font variants can increase the page load time, especially if multiple
+font files are required. Optimize your font usage by only including the necessary variants in your CSS.
+For a comprehensive guide on CSS font properties, you can refer to the MDN Web Docs on [CSS Fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts). This resource provides detailed information on how to use and implement various font-related properties effectively in your web designs.
+

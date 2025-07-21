@@ -1,0 +1,45 @@
+
+.container {
+    background-color: aqua;
+}
+
+.box {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+}
+/* 
+Visual Comparison Table
+Element Type	Starts New Line	Custom Width/Height	Example Tag	Use Case Example
+Inline	No	No	<span>	Text styling within paragraphs
+Block	Yes	Yes	<div>	Sections, layouts
+Inline-block	No	Yes	<div style="display:inline-block;">	Menu items, grid elements */
+
+
+.box1 {
+    background-color:red;
+    position: relative;
+    left: 250px;
+    z-index: 7;
+}
+
+.box2 {
+    background-color: blue;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    z-index: 2;
+}
+
+/* default z-index wo hota hai auto */
+
+.box3 {
+    background-color: greenyellow;
+    position: relative;
+    z-index: 5;
+}
+
+.box4 {
+    background-color: violet;
+}

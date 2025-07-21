@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+}
+
+h1{
+  background-color:forestgreen;
+  position: fixed;
+  /* width: 100%; */
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  
+}
+
+main{
+  padding-top: 60px;
+  /* margin-top: 60px; */
+  /* why padding-top? and not margin-top? explanation:  */
+  /* because we want to push the content down without affecting the layout of the header */
+  /* padding does not affect the layout of the header, while margin does */ 
+  /* explained in video in depth  */
+
+}

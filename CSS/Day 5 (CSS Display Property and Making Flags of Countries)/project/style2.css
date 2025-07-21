@@ -1,0 +1,19 @@
+
+
+.circle{
+  background-color: red;
+  height: 60vh;
+  width: 60vh;
+  border-radius: 50%;
+  margin: auto;
+  /* Horizontally centers the circle within its parent container */
+  /* for vertical, there is no command  */
+  margin-top: 20vh;
+  
+ 
+}
+/* margin: auto; */
+/* Horizontally centers the element within its parent container (when the element is a block-level element and the parent has a defined width). */
+
+/* margin-top: 20vh; */
+/* Adds a top margin equal to 20% of the viewport height, pushing the circle down from the top of the page. */

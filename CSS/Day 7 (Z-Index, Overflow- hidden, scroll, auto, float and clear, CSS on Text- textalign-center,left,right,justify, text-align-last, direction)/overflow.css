@@ -1,0 +1,13 @@
+div {
+    height: 200PX;
+    width: 200px;
+    background-color: aqua;
+    overflow: hidden; /* hides the overflow content */
+    /* overflow: scroll; */ /* adds scrollbars if content overflows */
+    /* overflow: auto; */ /* adds scrollbars only if content overflows */
+    /* overflow-x: hidden; 
+    overflow-y: scroll; */
+}
+
+/* by default, overflow is visible */
+/* overflow: visible; */
