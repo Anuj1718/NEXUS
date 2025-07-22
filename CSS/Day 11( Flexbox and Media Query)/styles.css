@@ -1,0 +1,69 @@
+.container{
+    display: flex;
+    background-color: aqua;
+    flex-direction: row;
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+}
+
+/* flex operation on item */
+/* order it defines the order of element */
+/* default order is zero */
+
+
+/* add flex grow values of all and divide the empty space by that value and assign how much space each box will take */ 
+/* flex grow grows along main axis */
+
+/* flex basis is the initial size of the element before flex grow and shrink are applied, jo value set karte hain wo initial size hota hai like jo denge wo width ya height ho jayegi depending on axis  */ */
+/* align self always works on cross axis, it overrides the align items property of the container  */
+.box1{
+    background-color: red;
+    /* order: 10; */
+    /* align-self: start; */
+}
+
+.box2{
+    background-color: blue;
+    /* width: 600px; */
+    /* flex-grow: 1;  */
+    /* flex-shrink: 2; */
+    /* flex-basis: 300px; */
+}
+
+.box3{
+    background-color: green;
+    /* order: -1; */
+    /* flex-grow: 3;  */
+    /* align-self:end; */
+    /* flex: 2 2 200px; */
+
+}
+
+/* flex: <flex-grow> <flex-shrink> <flex-basis>; */
+/* shortcut */
+ 
+
+.box4{
+    background-color: orange;
+    /* order: 5; */
+    
+}
+
+/* Desktop */
+
+
+
+/* Tablet */
+
+
+/* Mobile */
+
+
+

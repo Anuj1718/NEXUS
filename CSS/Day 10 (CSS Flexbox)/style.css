@@ -1,0 +1,75 @@
+.container {
+    background-color: aquamarine;
+    height: 1000px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* flex direction will identify my main axis */
+/* by default it is row, but we can change it to column */
+/* the opposite direction will be the cross axis */
+
+/* justify-content will align items along the main axis */
+/* align-items will align items along the cross axis */
+/* flex-wrap will allow items to wrap onto multiple lines */
+/* align-content will align the lines of items when there is extra space in the cross axis */
+
+/* flex-direction: row; /* default, items are laid out in a row */
+/* flex-direction: column; /* items are laid out in a column */
+/* flex-direction: row-reverse; items are laid out in a row, but in reverse order  */
+/* flex-direction: column-reverse; items are laid out in a column, but in reverse order  */
+
+/* dont mention height for stretch  */
+/* align-items: stretch;    Default. Items stretch to fill the container (cross axis) */
+/* align-items: flex-start; Items align to the start of the cross axis  */
+/* align-items: flex-end;   Items align to the end of the cross axis */
+/* align-items: center;     Items are centered along the cross axis */
+/* align-items: baseline;   Items align along their text baseline */
+
+
+/* see all this in lecture pdf  */
+
+/* how to center a div  */
+  /* justify-content: center; */
+    /* align-items: center; */
+
+
+/* flexbox is a one-dimensional layout model, meaning it works with either rows or columns at a time */
+/* it is not designed for two-dimensional layouts like grids */
+/* flexbox is great for aligning items in a single direction, either horizontally or vertically */
+/* it is useful for creating responsive layouts where items can adjust their size and position based on the available space */
+/* flexbox properties can be applied to the container (parent) and the items (children) */
+/* the container properties control the layout of the items, while the item properties control their individual behavior */
+/* flexbox is supported in all modern browsers, but older versions may require prefixes like
+   -webkit- or -moz- for compatibility */     
+
+/* flexboxfroggy.com  */
+
+.box {
+    height: 150px;
+    width: 150px;
+    border: 5px solid black;
+    margin: 5px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.box1 {
+    background-color: red;
+}
+
+.box2 {
+    background-color: blue;
+}
+
+.box3 {
+    background-color: green;
+}
+
+.box4 {
+    background-color: orange;
+}
