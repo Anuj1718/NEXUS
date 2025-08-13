@@ -70,7 +70,7 @@ let obj = {};
 
 // console.log(customer);
 
-//  Object.protoype
+
 const customer = {
     name:"Rohit",
     age:23,
@@ -86,18 +86,33 @@ Object.defineProperty(customer, "name", {
     enumerable:false,
 })
 
-// enumerable: jis bhi key ka enumerable true hga, un sabka acces hga ya print hga
+
+for (let key in customer) {
+    console.log(key); // output: age, account_number, balance not name because name is not enumerable
+    // but then again why is it not printing Object.prototype properties like toString, hasOwnProperty, etc.
+    // because Object.prototype properties are not enumerable by default
+    // to make them enumerable, we can use Object.defineProperty
+    // Object.defineProperty(Object.prototype, 'toString', { enumerable: true });
+    // now it will print Object.prototype properties
+    // but this is not a good practice, so we will not do it
+}
+for (let key in customer2) {
+    console.log(key); // output: city, place, age, account_number, balance not name because name is not enumerable    
+}
+
+// enumerable: jis bhi key ka enumerable true hga, un sabka acces hoga ya print hoga
 //  Inherit hoke bhi koi bhi property or key aati hai , uska enumerbale true hua toh wo bhio print hga
 
 
-
-// console.log(Object.getOwnPropertyDescriptor(Object.prototype , 'toString'));
+// Proof that Object.prototype properties are not enumerable by default
+// Object.getOwnPropertyDescriptor(obj, "key") 
+// console.log(Object.getOwnPropertyDescriptor(Object.prototype , 'toString')); // output: { value: [Function: toString], writable: true, enumerable: false, configurable: true }
 Object.defineProperty(Object.prototype,'toString',{
     enumerable:true,
 } )
 
 for(let key in customer)
     console.log(key);
-
+// output: name, age, account_number, balance, toString
 
 
