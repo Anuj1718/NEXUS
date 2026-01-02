@@ -27,10 +27,14 @@
 
 //  Multiple condition: switch
 
-// console.log(new Date().getDay()); // output 0-6
+// console.log(new Date().getDay()); // output 0-6, newData() gives current date and time
 
 // let day = "0";
-// === : strict comparison happens in switch
+
+// === : strict comparison happens in switch 
+// switch uses strict comparison(===) internally
+// hence if day is string "0" it will not match case 0 which is number 0
+// hence use let day = 0;
 
 // switch(day)
 // {
@@ -58,6 +62,7 @@
 //     default:
 //         console.log("Not a Valid Day");
 // }
+// say day is 5 and if u do not put break after case 5, it will print Friday and Saturday both until it finds a break or end of switch
 
 //  loop : ek hi kaam ko baar baar karna
 
@@ -66,6 +71,9 @@
 
 //     console.log("Hello Coder Army") 
 // }
+//each time new memory is created for i in for loop unlike cpp where same memory is used, hence slower in js
+
+//cant write const i=0;i<20;i++ because const cannot be changed
 
 //  sum of first n number: 10 number
 // let sum = 0;
@@ -75,6 +83,8 @@
 // }
 // for i and sum, each time, new memory is created unlike in cpp, hence slower in js
 // console.log(sum);
+
+
 
 
 
@@ -91,15 +101,31 @@
 // 12345
 // 12345
 
-// "/n , /t"
-// Homework mein sochna hai
+
+
+// Common escape sequences with \:
+
+// \n → newline
+
+// \t → tab
+
+// \\ → a literal backslash
+
+// \' → single quote (inside single-quoted string)
+
+// \" → double quote (inside double-quoted string)
 
 // for(let j=0;j<6;j++){
 //    for(let i=1;i<=5;i++)
 //    {
 //     console.log(i);
+// //  process.stdout.write(i + " ");
 //    }
 // }
+
+// In JavaScript console.log() always ends with a newline, so you need something that doesn’t automatically break the line.
+
+// Use process.stdout.write() (Node.js):
 
 // for(let i=0;i<20;i++)
 //     console.log(i);
@@ -148,7 +174,7 @@ const obj = {
     amount:420,
     city: "kotdwar"
 }
-
+ī
 
 
 // const key = Object.keys(obj);
@@ -158,9 +184,22 @@ const obj = {
 //     console.log(obj[key[i]]);
 // }
 
+// Object.values(obj); // [ 'rohit', 30, 420, 'kotdwar' ]
+// const values = Object.values(obj);
+// for(let i=0;i<values.length;i++)
+// {
+//     console.log(values[i]);
+// }
+
+// Object.entries(obj); // [ [ 'name', 'rohit' ], [ 'age', 30 ], [ 'amount', 420 ], [ 'city', 'kotdwar' ] ]
+const entries = Object.entries(obj);
+// for(let i=0;i<entries.length;i++)
+// {
+//     console.log(entries[i][0], entries[i][1]);
+// }
+
 
 // for in loop
-
 
 
 

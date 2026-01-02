@@ -11,7 +11,7 @@
 
 // obj.id = 11;
 // console.log(obj); // output { id: 11, balance: 200 }
-// here it is acceptable to change the value of the object as constant is used for reference, not for the value menaing constant is for the location of the object in memory (stored in stack), not for the value of the object (stored in heap)
+// here it is acceptable to change the value of the object as constant is used for reference, not for the value meaning constant is for the location of the object in memory (stored in stack), not for the value of the object (stored in heap)
 
 // let obj2 = {
 //     id:20,
@@ -106,5 +106,5 @@ console.log(str12.trimEnd()); // output: " hello ji", trims the whitespace from 
 // New way to create string
 let lasteststring = new String("Hello Coder Army"); // creates a new String object
 console.log(lasteststring); // output: String { "Hello Coder Army" }, creates a new String object
-console.log(typeof lasteststring);// output: "object", as String is a non-primitive data type in JavaScript
+console.log(typeof lasteststring);// output: "object" — because `new String()` creates an object, not a primitive
 // now memory location of string object is stored in heap, and the reference of that object is stored in stack instead of in stack directly like in the case of primitive data types

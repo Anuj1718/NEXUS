@@ -27,6 +27,7 @@
 
 // // function
 
+// can store function in variable unlike other programming languages
 // let fun = function(){
 //     console.log("Hello Coder army");
 //     return 10;
@@ -39,7 +40,7 @@
 
 // // String to number
 // let account_balance = "100";
-// let num = Number(account_balance); //
+// let num = Number(account_balance); // output: 100
 
 // console.log(typeof account_balance);
 // console.log(typeof num);
@@ -86,12 +87,16 @@
 // console.log(Boolean(1)); // // Output: true
 
  // Operators
+ //Arithmetic Operators
+// +, -, *, /, %, ++, --
+
 // console.log((((6*(3+18))/6)-9));
 // // 18+3-9
 // Precedence of operators
 // // Divide Multiply Left to Right
 // // Add sub Left to right
-
+// 7.3 /2 = 3.65
+// console.log(7.3/2); // Output: 3.65
 // // Modulus give remainder
 // console.log(20%3); // Output: 2
 
@@ -103,7 +108,7 @@
 // let total = ++sum; 
 // console.log(total); // Output: 21
 // console.log(sum); // Output: 21
-// let total1 = sum++;
+// let total1 = sum++; // give old value first then increment
 // console.log(total1); // Output: 21
 // console.log(sum); // Output: 22
 

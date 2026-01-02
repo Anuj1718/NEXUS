@@ -4,12 +4,15 @@
 // obj.age = 20;
 // key value writable enumerable configurable
 // console.log(Object.getOwnPropertyDescriptor(obj,'name')); // output: { value: 'Rohit', writable: true, enumerable: true, configurable: true }
+
 // //  writable means value ko kya mein change kar sakta hu, if true then yes, else no
 // //  enumerable means key ko kya mein print kar sakta hu, if true then yes, else no
 // configurable means can i change the property descriptors writeable and enumerable of the key, if true then yes, else no
-// //  configurable means key ko kya mein delete kar sakta hu, if true then yes, else no    
+// //  configurable means key ko kya mein delete kar sakta hu, if true then yes, else no   (delete operator works only when configurable is true) 
 // // obj.name = "Mohit"; // change the value of name
 // console.log(obj.name); // output: Mohit
+
+
 
 
 // // configurable= false
@@ -68,7 +71,9 @@ let obj = {};
 // customer.name = "Mohit";
 // // customer.account_number = 10001;
 
-// console.log(customer);
+// console.log(customer); // output: { name: 'Rohit', age: 23, account_number: 123, balance: 2000 }
+
+// cant use const on name or account_number as they are keys of object not variables
 
 
 const customer = {
@@ -100,8 +105,8 @@ for (let key in customer2) {
     console.log(key); // output: city, place, age, account_number, balance not name because name is not enumerable    
 }
 
-// enumerable: jis bhi key ka enumerable true hga, un sabka acces hoga ya print hoga
-//  Inherit hoke bhi koi bhi property or key aati hai , uska enumerbale true hua toh wo bhio print hga
+// enumerable: jis bhi key ka enumerable true hoga, un sabka acces hoga ya print hoga
+//  Inherit hoke bhi koi bhi property or key aati hai , uska enumerable true hua toh wo bhi print hoga
 
 
 // Proof that Object.prototype properties are not enumerable by default
@@ -114,5 +119,10 @@ Object.defineProperty(Object.prototype,'toString',{
 for(let key in customer)
     console.log(key);
 // output: name, age, account_number, balance, toString
+
+
+//forin loop iterates over all enumerable properties, including those inherited through the prototype chain.
+// Object.keys() only returns the object's own enumerable property names, not the inherited ones.
+// this is the main difference between for in loop and Object.keys()
 
 

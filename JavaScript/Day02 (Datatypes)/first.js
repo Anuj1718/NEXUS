@@ -50,4 +50,5 @@ console.log(Number.MIN_SAFE_INTEGER);
 
 // Non Primitive Data Type
 // Array, Object , function
+// one reference (object) type that includes arrays, functions, and more like date
 

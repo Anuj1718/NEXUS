@@ -1,14 +1,18 @@
 // const d = new Date();
 // originally calculates in milliseconds (from system time)
-// from 1st Jan 1970, hence if you give argument 1000, it will give you 1 second after 1st Jan 1970
+// from 1st Jan 1970, hence if you give argument 1000, it will give you 1 second after 1st Jan 1970 // const d = new Date(1000);
 // console.log(d); // will give the current date and time
 
-// console.log(d.toDateString()); // will give the date in string format
+// console.log(d.toDateString()); // will give the date in string format without time
 // console.log(d.toString()); // will give the date in string format with time
-// console.log(d.toISOString()); // will give the date in ISO format
+// console.log(d.toISOString()); // will give the date in ISO format i.e International Standard Organization format
+
+
+// it fetches time from system clock, so if u change system time, it will reflect here also
 
 // Copilot
-// console.log(d.toLocaleString()); // will give the date in local format
+//Formatting Date Outputs in JavaScript
+// console.log(d.toLocaleString()); // will give the date in local format with time
 // console.log(d.toLocaleDateString()); // will give the date in local format without time
 // console.log(d.toLocaleTimeString()); // will give the time in local format
 // console.log(d.toUTCString()); // will give the date in UTC format
@@ -54,11 +58,13 @@
 // Number: 0 based start honge
 // String: 1 based start honge
 
+//Another Date Formatting
 // const d = new Date("2022-10-20"); // 10 is October, 1 is January
 // // year / Month / Date / Hour / Minute / second / millisecond
 // const date = new Date(2024,5,28, 10, 12,45, 231); // 5 is June, 0 is January
 // console.log(date.toString());
 
+//Setting date components
 
 // const d = new Date();
 // d.setDate(20);
@@ -66,12 +72,12 @@
 // d.setMonth(3);
 // console.log(d.toLocaleString());
 
-//  Date calculation
+//  Date calculations
 
 // const date1 = new Date();
 // const date2 = new Date("2025-04-21");
 
-// console.log(date2-date1);
+// console.log(date2-date1); //>, <, etc can be used
 //  difference between date is in millisecond
 
 //  Countdown Timer for olympics

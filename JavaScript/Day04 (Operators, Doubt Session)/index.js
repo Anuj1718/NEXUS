@@ -3,19 +3,19 @@
 
 // let a1 = 1;
 // let a2 = 2;
-// console.log(a1==a2);
+// console.log(a1==a2); //false
 // == both are equal
 // < less than, > greater than
 // <= less than equal to , >= greater than equal to
 
 // let num = 10;
 // let str = "20";
-// console.log(num==str);
+// console.log(num==str); //false
 // // Type conversion hoga string to number
 
 // let a1 = 10;
 // let str1 = "10";
-// console.log(a1==str1); // 
+// console.log(a1==str1); // true
 
 
 // // === type check, then compare the value
@@ -24,7 +24,11 @@
 
 // let a2 = 30;
 // let a3 = 40;
-// console.log(a2===a3);
+// console.log(a2===a3); // false
+
+// let a4 = "hello";
+// let a5 = "hello";
+// console.log(a4===a5); // true
 
 // null comparison
 // null == undefined // true
@@ -96,29 +100,30 @@
 // The most notable difference between this operator and the strict equality (===) operator is that the strict equality operator does not attempt type conversion. Instead, the strict equality operator always considers operands of different types to be different. The strict equality operator essentially carries out only step 1, and then returns false for all other cases.
 // // 
 
+// logical operator
 // // let age = 18;
 // let money =420;
-// console.log(age<18&&money>200);
+// console.log(age<18&&money>200); // false
 
-// console.log(age>10 || money>200)
+// console.log(age>10 || money>200) // true
 
-// console.log( !(age>10));
+// console.log( !(age>10)); // false
 
 //  bitwise operartor
-console.log(4&5);
+console.log(4&5); //compare them bitwise i.e in binary form and then apply & operation
 console.log(11&14);
 console.log(11|14);
 console.log(5^7);
-// The bitwise XOR (exclusive OR) operator takes two bits as input and outputs 1 if the bits are different, and 0 if the bits are the sam
+// The bitwise XOR (exclusive OR) operator takes two bits as input and outputs 1 if the bits are different, and 0 if the bits are the same
 console.log(5<<3);
 // 5 multiply by 2 power 3 // left shift
-// 101.0000000000000000
-// 101000.0000000
+// 101.0000000000000000 : 5
+// 101000.0000000 : 40
 
 console.log(20>>2);
 // right shift , 20 divided by 2 power 2
-// 10100.000000
-// 101.0000000
+// 10100.000000 : 20
+// 101.0000000 : 5
 
 
 // Doubt session: 

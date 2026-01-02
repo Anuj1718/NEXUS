@@ -14,7 +14,13 @@
 // console.log(num.toExponential(2)); // returns string, 2 is the number of digits after decimal point in exponential form, // 2.32e+2
 // console.log(num.toString()); // returns string, converts number to string
 // console.log(num.valueOf()); // returns number, gives the primitive value of the object
-// console.log(typeof num.toString()); 
+// console.log(typeof num.toString()); // output: string
+// console.log(typeof num.valueOf()); // output: number
+// console.log(typeof num); // output: number
+
+//let num = new Number(231.68); // object
+// console.log(num.toFixed(3)); // returns string, 3 is the number of digits after decimal point, 231.680
+// console.log(num.toPrecision(4)); // returns string, 4 is the total number of digits in the number, 231.7
 
 //  Math
 

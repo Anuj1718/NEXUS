@@ -12,7 +12,7 @@
 // add program
 
 // parameter
-// function sum(number1 , number2){
+// function sum(number1 , number2){ // no need to write let or const before parameters 
 //     console.log(number1+number2)
 // };
 
@@ -30,7 +30,7 @@
 // }
 
 // let result = multiply(4,5); 
-// can store the result in a variable
+// can store the result in a variable but only if function has return statement
 
 // console.log(result);
 
@@ -42,15 +42,34 @@
 //     // console.log("aur kya chal rha");
 // }
 
-// reference of function will be stored in fun variable in stack memory, it wont store result but whole function
+// A. The variable fun
+
+// Lives in the stack (inside the current execution context).
+
+// But it does not store the function itself.
+
+// It stores a reference (pointer) to the function object.
+
+// B. The actual function object
+
+// This is created in the heap.
+
+// It contains:
+
+// The function’s code (internally represented)
+
+// The scope / environment the function closes over
+
+// Hidden properties like [[Prototype]], name, length, etc.
 // any statement after return will not be executed
 
-// console.log(fun());
+//console.log(fun); // output: [Function: fun]
+// console.log(fun()); // output: Hello Coder Army , Mein toh badiya hu , Money
 
 
 //  Arrow function
 //
-// const fun = () => {
+// const fun = () => { // no need to use function keyword, just use arrow notation
 //     console.log("Hello Coder Army");
    
 // }
@@ -64,12 +83,15 @@
 // }
 
 // const sum = (number1, number2) => number1+number2 ;
-
+// implicit return when only one expression is there in the function body
 
 // console.log(sum(3,4));
 
 // const cube = number => number*number*number;
 // when you have only one parameter, you can omit the brackets
+
+//when u return a num in function then to call it use console.log and when u use console.log inside function then just call the function
+// when u dont return anything from function then it returns undefined by default eg if u return nothing and then do console.log, it will print undefined
 
 // console.log(cube(8));
 
@@ -114,12 +136,15 @@ let obj = {
 
 // fun(obj); //passed object as argument to a function
 
+
+
+
 // function love(obj1){
 //     console.log(obj1);
 // }
 
 // love(obj);
-// will changes in obj1 be reflected in obj?
+// will changes in obj1 inside function be reflected in original obj? if yes, pass by reference else pass by value
 // yes, as objects are passed by reference in JavaScript
 
 
@@ -152,8 +177,14 @@ let obj2 = {
 
 
 obj2 = Object.create(obj1);
+//console.log(obj2); // output: {} , empty object as obj2 does not have any own properties. console.log shows own enumerable properties only
+// console.log(obj2.a); // output: 1 (inherited from obj1)
+// console.log(obj2.b); // output: 2 (inherited from obj1)
+// console.log(obj2.c); // output: undefined as obj2 does not have property c and it is not inherited from obj1
 
-// obj2.__proto__ = obj1; //changing the prototype of obj2 to obj1
+
+// obj2.__proto__ = obj1; //changing the prototype of obj2 to obj1, // obj22 is inheriting properties from obj1, dont change prototype like this as not a healthy object, use Object.create instead
+//console.log(obj2.__proto__) // output: {a: 1, b: 2}
 // console.log(obj2.a); // output: 1 (inherited from obj1)
 // console.log(obj2.__proto__)
 

@@ -20,7 +20,7 @@ for(let key in obj)
 // // Object.keys(obj)
 // console.log(Object.keys(obj));
 
-// let obj2 = Object.create(obj); // obj2 is inheriting properties from obj
+// let obj2 = Object.create(obj); // obj2 is inheriting properties from obj, we are creating prototype chain here
 // console.log(obj2); // output: {} (obj2 has no own properties, but inherits from obj)
 // console.log(obj2.name); // output: rohan (inherited from obj via prototype chain)
 // obj2.money = 420;
@@ -34,6 +34,8 @@ for(let key in obj)
 // for in loop iterates over both own and inherited properties of an object
 // this is the main difference between for in loop and Object.keys()
 
+// Object.keys() only returns the object's own enumerable property names, not the inherited ones.
+// for in loop iterates over all enumerable properties, including those inherited through the prototype chain.
 
 //Question : As for in loop iterates over both own and inherited properties, why doesn't it iterate over the prototype chain of the object?
 // Answer: for in loop iterates over the enumerable properties of an object, which includes both own and inherited properties. However, it does not iterate over the prototype chain of the object. The prototype chain is a separate structure that is used to look up properties that are not found in the object

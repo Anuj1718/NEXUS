@@ -24,7 +24,7 @@ for(let key in arr){
 
 //use normal for loop or for of loop with arrays
 // for of loop : Isko array ke sath lete hai
-// for(let index=0; index<arr.length;index++)
+// for(let index=0; index<arr.length;index++) // length bhi 5 rakhega wo dono include nai karega
 //     console.log(index , arr[index]);
 // output: 0, 10, 1, 20, 2, 40, 3, 12, 4, 30
 
@@ -36,4 +36,4 @@ for (let value of arr) {
 }
 
 //  defineProperty
-// hw: defineProperties
+// hw: defineProperties : change multiple properties at once

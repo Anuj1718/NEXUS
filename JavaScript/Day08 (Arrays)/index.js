@@ -4,10 +4,13 @@
 // // at is latest, negative index le leta hai
 // console.log(arr.length);
 // // length
-// // helpful
+// // structuredClone is helpful
 
+//const newarr = arr;  // true, both are pointing to same memory location
 // console.log(newarr==arr);  // true
 // const newarr = structuredClone(arr); //false, both are different objects, pointing to different memory locations
+//if u use structuredClone, it will create a deep copy of the array, if u use =, it will create a shallow copy of the array
+// console.log(newarr==arr); // false
 
 // push, add element at end
 
@@ -32,7 +35,7 @@
 // arr.shift();
 // console.log(arr);
 
-// // delete operation
+// // delete operation : a particular index ko delete kar dega, lekin length same rahega, hole create ho jaega, this is not recommended
 // // [hole,2,35,1,8,9,"rohit"];
 // delete arr[0];
 // console.log(arr); //if i have to access the first element, it will give me undefined and the length will remain same, if i have to access the second element, it will give me 2
@@ -45,18 +48,19 @@
 
 // slice : // it will return a new array, it will not change the original array
 // console.log(arr);
-// let a = arr.slice(2,5);
+// let a = arr.slice(2,5); // starting_index, ending_index(not included)
 // console.log(a);
 // console.log(arr);
 
 // splice : // it will change the original array, it will return the deleted elements
 // console.log(arr);
-// let newsplice = arr.splice(2,5);
+// let newsplice = arr.splice(2,5); // starting_index, total_element_delete
 // console.log(newsplice);
 // console.log(arr);
 // splice(starting_index,total_element_delete,add value) // it will delete the elements from starting_index and total_element_delete number of elements, and add value at that index
 // arr.splice(2,0,"money",90);
 // console.log(arr);
+
 // console.log(arr.toString()); // // toString will convert the array into string, it will not change the original array
 // console.log(arr.join("*")); // // join will convert the array into string, it will not change the original array, it will join the elements with the given separator
 
@@ -67,9 +71,8 @@
 // let arr4 = [23,432,1123,31];
 // let arr3 = arr1.concat(arr2,arr4); // it will return a new array, it will not change the original arrays, this aint 2d array
 // console.log(arr3[6]);
-// arr1.push(arr4); // 2d array
-// console.log(arr1[2][0]);
-
+// arr1.push(arr4); // 2d array so dont do this
+// console.log(arr1[2][0]); // 23
 // 2d array
 let arr = [1,2,3,4,5,6,7,8,9];
 let arr2d = [[1,2,3],[4,5,6],[7,8,9]]; // 2d array
@@ -96,12 +99,12 @@ let abc = [2,1,4,1];
 console.log(Array.isArray(abc)); // true, it is an array
 console.log(typeof abc); // object, it is an object in javascript, arrays are objects in javascript
 
-// let ac = new Array(10); // can create an array of 10 undefined elements, not recommended, if you give a number, it will create an array of that length with empty slots, if you give multiple arguments, it will create an array with those elements
+// let ac = new Array(10); // 10 is size, can create an array of 10 undefined elements, not recommended, if you give a number, it will create an array of that length with empty slots, if you give multiple arguments, it will create an array with those elements
 let ac = Array(10); // same as above, creates an array of 10 undefined elements, not recommended
 let ac1 = Array(1,2,3,4,5, "Anuj"); // creates an array with those elements
 // console.log(ac); // [ <10 empty items> ]
 // console.log(ac1); // [ 1, 2, 3, 4, 5, 'Anuj' ]
 // console.log(ac.length); // // 10
 // console.log(ac1.length); // 6, length of the array
-
+//in js, array arent stored in contiguous memory locations, they are objects with special properties and methods to handle array-like behavior, cuz if u make array of integer, and number is 8 bytes say, so if we replace with string, itll take something else bytes causing issues
 // array and function typeof is object, will learn why later when we learn internal implementation of javascript
