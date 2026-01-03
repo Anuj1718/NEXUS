@@ -126,6 +126,7 @@ function pickupOrder(foodDetails){
            },3000)
 
     }) //write reject if needed
+    return pr;
 
     
 }
@@ -136,7 +137,8 @@ function deliverOrder(droplocation){
     setTimeout(()=>{
         console.log("Order Delivered succesfully");
     },5000)
-}
+} 
+ 
 
 
 
