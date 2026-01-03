@@ -1,2 +1,17 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+
+# This is a .gitattributes file configuration for Git.
+
+# * text=auto tells Git to automatically detect text files and normalize their line endings to LF (Line Feed) when storing them in the repository.
+# This helps prevent line ending issues between Windows (CRLF) and Unix/Linux/macOS (LF) systems.
+# It ensures consistent line endings in your repo, making collaboration across different operating systems smoother.
+
+# warning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it
+# This warning means:
+
+# Your .gitattributes file currently uses LF (Line Feed, used on Linux/macOS) line endings.
+# On Windows, Git is set to convert line endings to CRLF (Carriage Return + Line Feed) when you check out or modify files.
+# So, the next time Git updates or checks out .gitattributes, its line endings will be changed from LF to CRLF.
+# This is normal on Windows and is controlled by your Git settings and .gitattributes. It helps keep line endings consistent across different operating systems. You can safely ignore this warning unless you specifically need only LF endings.
