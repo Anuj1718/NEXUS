@@ -102,3 +102,5 @@ git checkout master
 then
 git merge branch-name
 
+<!-- merges the specified branch into the current branch -->
+<!-- use this command when u have completed the feature in the new branch and want to merge it back into the master branch. -->
