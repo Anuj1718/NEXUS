@@ -39,7 +39,7 @@ say 3rd commit mai updatebalance function ko change kiya tha, 5th mai login func
 isliye agar sirf 3rd commit ko undo karna hai to revert karenge to 4th, 5th, 6th commits safe rahenge aur ek new commit banega jo 3rd commit ke changes ko undo karega.
 isliye fir uske baad firse add aur commit karna padega.
 aur agar 3rd commit mai jo changes kiye the wo 4th, 5th, 6th commits mai change nahi hue the to revert karne mai koi dikkat nahi aayegi.
-and if 3rd commit ke changes 4th, 5th, 6th commits mai change hue the to merge conflicts aayenge jise manually resolve karna padega.
+and if 3rd commit ke changes 4th, 5th, 6th commits mai change hue the ya use hue the to merge conflicts aayenge jise manually resolve karna padega.
 
 each commit comes with a unique hashcode which is generated using SHA-1 algorithm.
 each commit comes from the previous commit and has a unique hashcode.
@@ -104,3 +104,19 @@ git merge branch-name
 
 <!-- merges the specified branch into the current branch -->
 <!-- use this command when u have completed the feature in the new branch and want to merge it back into the master branch. -->
+
+
+during merge conflicts, git will mark the files that have conflicts and u need to manually resolve the conflicts.(in resolve in merge editor)
+u can either keep the changes from the current branch, the changes from the branch being merged, or a combination of both.
+after resolving the conflicts, u need to add the files and commit the changes to complete the merge.
+after merging, do
+git status
+to see the status of the merge.
+and git add .
+then 
+git commit -m "Merged branch-name into master"
+to complete the merge.
+then u can delete the branch using
+git branch -d branch-name
+
+
