@@ -465,7 +465,7 @@ git push -u origin main
 
 push an existing repository from the command line:
 git remote add origin https://github.com/yourusername/your-repository.git : It adds a new remote repository named "origin" with the specified URL.
-git branch -M main : It renames the current branch to "main" (if it's not already named that).
+git branch -M main : It renames the current branch to "main" (if it's not already named that). Earlier, the default branch was often called "master", but many repositories now use "main" as the default branch name cuz master was considered problematic and insensitive.
 git push -u origin main : It pushes the current branch to the remote repository and sets the upstream branch for future pushes and pulls. With the -u flag, Git remembers the association between the local "main" branch and the remote "main" branch on "origin", so you can use git push and git pull without specifying the remote and branch names in the future.
 later, just use:
 git push origin main or git push
@@ -477,3 +477,30 @@ after upstream is set, you can use the following commands to push changes to the
 | `git push origin main` | Push `main` explicitly                         |
 | `git push origin`      | Push **all** matching branches (usually avoid) |
 
+
+
+in companies, usually we use SSH key to connect to github instead of HTTPS link.
+
+in companies, we fork a repository, make changes in our forked repo, and then create a pull request to suggest those changes to the original repository. This allows for code review and collaboration before merging changes into the main codebase.
+or
+clone the repository, create a new branch, make changes, push the branch to the remote repository, and then create a pull request from that branch to the main branch of the original repository.
+
+pullrequest: A pull request (PR) is a way to propose changes to a codebase in a collaborative environment, typically on platforms like GitHub, GitLab, or Bitbucket. When you create a pull request, you are requesting that your changes be reviewed and potentially merged into another branch, usually the main branch of the repository.
+
+raise pr: After pushing your changes to a branch in your forked repository, you can go to the original repository on GitHub. There, you'll see an option to create a pull request from your branch. Click on it, provide a title and description for your changes, and submit the pull request for review.
+
+
+git pull origin main: This command fetches the latest changes from the remote repository named "origin" and merges them into your current local branch (which is "main" in this case). It ensures that your local branch is up to date with the remote branch before you push any new changes.
+
+git branch -r: This command lists all the remote branches available in the remote repository. It shows you the branches that exist on the remote server, allowing you to see what branches are available for collaboration or tracking.
+
+git push origin --delete feature: This command deletes the remote branch named "feature" from the remote repository named "origin". It is used when you want to remove a branch that is no longer needed or has been merged into another branch.
+
+git pull --rebase origin main: This command fetches the latest changes from the remote repository named "origin" and rebases your current local branch (which is "main" in this case) on top of those changes. Instead of merging the changes, it rewrites your local commits to appear as if they were made after the latest commits from the remote branch, resulting in a linear commit history.
+
+
+meme: never push to code on friday evening
+explanation: If something goes wrong, you might have to spend your entire weekend fixing it, and he has to fix merge conflicts alone.
+
+does github use github too?
+Yes, GitHub uses Git for version control and also hosts its own code repositories on its platform. GitHub is built around Git, providing a web-based interface for managing Git repositories, collaborating on code, and utilizing various features like pull requests, issues, and project management tools.
