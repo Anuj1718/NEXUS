@@ -504,3 +504,6 @@ explanation: If something goes wrong, you might have to spend your entire weeken
 
 does github use github too?
 Yes, GitHub uses Git for version control and also hosts its own code repositories on its platform. GitHub is built around Git, providing a web-based interface for managing Git repositories, collaborating on code, and utilizing various features like pull requests, issues, and project management tools.
+
+
+<!-- stash: homework -->
