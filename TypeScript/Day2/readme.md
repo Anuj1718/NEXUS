@@ -85,7 +85,7 @@ let tuple: [string, number] = ["Rohit",10];
 
 
 <!--  Compile-time refers to the phase when the source code is translated into machine code or an intermediate format (e.g., bytecode). This is done by a compiler. -->
-
+<!-- eg C++, java -->
 
 Errors detected at this phase are called compile-time errors.
 Examples of compile-time errors include:
@@ -94,6 +94,16 @@ Type mismatches (e.g., assigning a string to a variable declared as a number in 
 Variable declarations without initialization (if required by the language).
 
 
+CPP, Java, TypeScript are compiled languages.
+
+Javascript,python,php are interpreted languages.
+meaning it is executed directly without a separate compilation step.
+it wont compile, it will execute directly line by line.
+
+hence, js is slower than cpp, java, ts.
+java is slower than cpp as it compiles to bytecode first then runs on JVM.
+bytecode is slower than machine code.
+
 
 <!-- Runtime refers to the phase when the program is executed after it has been compiled (or interpreted). -->
 
@@ -101,15 +111,81 @@ Variable declarations without initialization (if required by the language).
 Examples of runtime errors include:
 Dividing by zero.
 Accessing undefined variables or null references.
-Running out of memory.
+Running out of memory. // infinite loops ie stack becomes too deep due to while(True) -->
+
 Examples of Runtime Activities:
 
 Executing code instructions.
 Handling user inputs.
 Interacting with APIs or databases -->
 
+Just in Time (JIT) Compilation:
+Some languages, like Java and JavaScript (in modern engines), use Just in Time (JIT) compilation. This means that parts of the code are compiled into machine code at runtime, just before execution, to improve performance.   
+
+JavaScript JIT compilation — when it became real
+
+JavaScript was interpreted from the start (1995), but JIT (Just-In-Time) compilation entered mainstream JS engines in the mid-2000s.
+
+Key milestones:
+
+2008: Mozilla shipped TraceMonkey (a tracing JIT) in Mozilla Firefox 3.5.
+
+2009–2011: Method-based JITs replaced tracing JITs:
+
+Mozilla → JägerMonkey → IonMonkey
+
+Apple → Nitro (JavaScriptCore)
+
+Google → TurboFan (later)
+
+Bottom line: JavaScript effectively became a JIT-compiled language between 2008 and 2010, depending on engine.
+
+V8 engine — origin and release
+
+Created: 2008 by Google
+
+First released: September 2008
+
+Shipped with: Google Chrome
+
+Major design choice: JIT compilation from day one
+
+Extended beyond browsers: Node.js (2009) used V8 to bring JS to servers
 
 
+**Short answer:** **Mozilla introduced JIT to JavaScript first. Chrome (Google) industrialized and popularized it.**
+
+**Clear timeline**
+
+* **Mozilla** — **first to ship JIT for JavaScript**
+
+  * **2008**: **TraceMonkey** landed in **Mozilla Firefox 3.5**
+  * This was the **first mainstream JS JIT** (tracing-based).
+* **Google / Chrome** — **made JIT the default performance model**
+
+  * **2008**: **V8** launched with **Google Chrome**
+  * Used **method-based + optimizing JIT from day one**, simpler and more predictable than tracing JIT.
+
+**Why people credit Chrome anyway**
+
+* TraceMonkey was clever but complex and brittle.
+* V8’s design scaled better, won benchmarks, and **forced every engine to follow**.
+* With **Node.js**, V8 pushed JIT beyond browsers into servers.
+
+**Bottom line**
+
+* **Invention credit:** **Mozilla**
+* **Dominance + standardization:** **Google / Chrome**
+
+If you want the sharper distinction:
+**Mozilla proved JIT was possible; Chrome proved it was the future.**
+
+<!-- platform dependent vs platform independent languages -->
+machine code is platform dependent
+bytecode is platform independent (java bytecode, jus need jvm to run on any platform)
+js is platform independent (runs on any browser or js engine on any platform)
+
+TypeScript is a superset of JavaScript that adds static typing and other features to the language. It is designed to be compiled down to plain JavaScript, which means that TypeScript code is ultimately executed as JavaScript in the runtime environment.
 
 <!--  Objects -->
 

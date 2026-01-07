@@ -1,7 +1,7 @@
 let num:number = 10;
 
 let x = 10;
-//ts infers the type, it will infer that x is number and we cannot assign other type value to x
+//ts infers the type, it will infer that x is number and we cannot assign other type value to x, u can hover to check the type
 // x = "Rohit"; // error
 let val = "Rohit"
 
@@ -29,27 +29,35 @@ if(typeof val2 === 'number') //type narrowing
 console.log(val2.toFixed(2));
 // cant consume directly without type narrowing
 
-// Non Primitive
+// Non Primitive Types
 
 let arr:number[] = [2,4,5,7,11];
-let arr2 = [2,1,19,10];
+let arr2 = [2,1,19,10]; //valid as ts infers the type as number array, u can hover to check
 
-let arr3:(string | number)[] = ["Rohit",20,11,"Sohan"];
+// let arr3 = ["Rohit",20,11,"Sohan"]; // infers as (string | number)[], hover to check
+
+//explicitly defining array with multiple types
+let arr3:(string | number)[] = ["Rohit",20,11,"Sohan"]; // | is union operator
 arr3.push(10);
+// arr3.push(true); // error
 
 let arr4:(string | number | boolean)[] = ["rohit",10,false,11];
 
-
+// Tuples
+// fixed length array with fixed types at each index
+//if u have 10 elements, u gotta mention all 10 types in order
 let tuple:[string,number,number] = ["Rohit",10,11];
 
 
 // Objects
+
 // inline
 let obj1:{name:string,age:number,gender:string} = {
     name:"Rohit",
     age:20,
     gender:"female"
 }
+//even if u dont mention the type, ts infers the type from the initialization, can hover to check
 
 
 let person :{name:string;age:number,balance:number};
@@ -64,7 +72,7 @@ let n1:number;
 n1 = 10;
 
 
-
+// Using Type Alises > 
 type customer = {
     name:string,
     age:number,
@@ -79,7 +87,7 @@ let c1 : customer ={
     id:"fshfsd"
 }
 
-
+// using interface
 interface admin {
     names:string,
     age:number,
@@ -89,7 +97,11 @@ interface admin {
 interface admin {
     id:number
 }
-
+//interface can be extended, merged
+// type cannot be merged or extended
+// interface is only for object types
+// type can be used for primitive types, union types, tuple types etc
+// hence interface is preferred for object types, use interface for defining object shapes instead of type alias
 
 let obj3: admin = {
     names:"Rohit",
