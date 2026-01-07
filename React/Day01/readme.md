@@ -13,7 +13,7 @@ root.render(element);
 
 ## Key Concepts
 
-- React is library of javascript
+<!-- - React is library of javascript -->
 - Whatever you can do in javascript you can do in react as well because react is library of javascript and vice versa
 - JSX is extension of javascript
 - JSX is not understood by browser directly
