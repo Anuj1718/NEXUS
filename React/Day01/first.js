@@ -72,9 +72,7 @@
 // // JS
 
 //thus, we have created our own mini version of React and ReactDOM library
-// Now, we will see how to do the same using actual React and ReactDOM library
-
-
+// Now, we will see how to do the same using actual React and ReactDOM library.
 
 
 
