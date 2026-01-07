@@ -24,3 +24,6 @@ root.render(element);
 - Babel is a tool that is used to convert es6 to es5
 - Babel is a tool that is used to convert typescript to javascript
 - Babel is a tool that is used to convert jsx to javascript and typescript to javascript
+
+
+ search React, typeof React and typeof ReactDOM in console to see both are objects
