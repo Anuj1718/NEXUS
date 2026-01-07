@@ -163,3 +163,7 @@ const obj11: Admin<string,number>={
 
 // generics provide type safety at compile time
 // union types provide type safety at runtime
+
+// u dont add ts in index.html script src
+// ts files are compiled to js files using tsc command
+// then js files are added to index.html
