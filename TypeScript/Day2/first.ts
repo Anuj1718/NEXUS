@@ -5,25 +5,29 @@ let x = 10;
 // x = "Rohit"; // error
 let val = "Rohit"
 
-
+// let money; // any type, u can assign any type of value
+//when u declare a variable without any type or initialization, ts infers it as any type
 let money:any;
+// this can be a dangerous thing as any type bypasses all type checking
 
 
 money = "Rohit";
 money = 20;
 
 // console.log(money.toUpperCase());
+//any type allows any operation without type checking, it can lead to runtime errors if the operations are not valid for the actual type of the variable
+//any behaves like js variable
 
-let val2:unknown;
+let val2:unknown; // unknown type is safer than any type, it doesnt allow any operation without type checking, we gotta narrow em down first before using
 
 val2 = "Rohit";
 val2 = 10;
 
-if(typeof val2 === 'string')
+if(typeof val2 === 'string') //type narrowing else will give error 
 console.log(val2.toUpperCase());
-if(typeof val2 === 'number')
+if(typeof val2 === 'number') //type narrowing
 console.log(val2.toFixed(2));
-
+// cant consume directly without type narrowing
 
 // Non Primitive
 

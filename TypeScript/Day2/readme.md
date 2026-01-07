@@ -46,7 +46,7 @@ let value: undefined;
 <!-- How to deal with null -->
 let value: null = null;
 
-
+<!-- Day 2 -->
 <!-- Type Inference in TypeScript refers to the ability of the TypeScript compiler to automatically determine the type of a variable based on the value assigned to it. This means that even if you don't explicitly specify a type, TypeScript can infer the most appropriate type and apply it. -->
 
 let age = 25;  // TypeScript infers that age is of type 'number'
@@ -57,7 +57,7 @@ let name = "Alice";  // TypeScript infers that name is of type 'string'
 when we assigned type by our own
 
 <!-- Limitations of Type Inference -->
-any: if we don't initilize the value initially
+any: if we don't initialize the value initially
 
 <!-- any -->
 let value: any = 42;
