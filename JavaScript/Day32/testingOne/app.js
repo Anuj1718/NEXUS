@@ -1455,10 +1455,10 @@ document.getElementById("closeFilter").addEventListener("click", () => {
 // });
 
 document.getElementById('applyFilter').addEventListener("click",()=>{
-    const selected = document.querySelector('input[name="filterOption"]:checked').value;
+    const selected = document.querySelector('input[name="filterOption"]:checked').value; //selecting on basis of attribute and checked means which is selected
 
     if(selected==="rating"){
-        restaurants.sort((a,b)=> b.rating-a.rating);
+        restaurants.sort((a,b)=> b.rating-a.rating); //de
     }
     else if(selected==="highLow"){
         restaurants.sort((a,b)=> b.price_for_two -a.price_for_two);

@@ -1320,7 +1320,7 @@ function getrestaurant(restaurants){
 
     //   create a card
         const card = document.createElement('div');  
-        card.classList.add('card');
+        card.classList.add('card'); // add class 'card' to div, can also use card.className='card';
 
 
     // create Image
@@ -1338,7 +1338,7 @@ function getrestaurant(restaurants){
        const h3 = document.createElement('h3');
        h3.textContent = restaurant.name;
 
-       const rate = document.createElement('span');
+       const rate = document.createElement('span'); //as span is inline element
        rate.textContent = "Rating: " + restaurant.rating;
        rate.classList.add('rating');
 
@@ -1405,7 +1405,9 @@ getrestaurant(restaurants);
 document.getElementById("Alcohol").addEventListener('click',()=>{
     
     const result = restaurants.filter((obj)=>obj.alcohol);
-    document.getElementById('root').replaceChildren();
+    // document.getElementById('root').innerHTML=""; //as previous 100 restaurants should be removed
+    //or
+    document.getElementById('root').replaceChildren(); //removes all child elements
     getrestaurant(result);
 
 })
@@ -1413,7 +1415,7 @@ document.getElementById("Alcohol").addEventListener('click',()=>{
 document.getElementById("Rating").addEventListener('click',()=>{
     
     const result = restaurants.filter((obj)=>obj.rating>4.5);
-    document.getElementById('root').replaceChildren();
+    document.getElementById('root').replaceChildren(); 
     getrestaurant(result);
 
 })

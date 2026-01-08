@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs'); //importing file system module
 const restaurant = [];
 
 for(let i=0;i<100;i++){
@@ -63,6 +63,7 @@ for(let i=0;i<100;i++){
 
 console.log(restaurant);
 
-const jsonData = JSON.stringify(restaurant, null, 4);  
-fs.writeFileSync('arrayData.json', jsonData, 'utf8');
+//to convert to JSON and write to a file
+const jsonData = JSON.stringify(restaurant, null, 4);   // pretty print with 4 spaces indentation
+fs.writeFileSync('arrayData.json', jsonData, 'utf8'); //synchronous write to file named arrayData.json
 
