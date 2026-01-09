@@ -7,18 +7,55 @@ import ReactDOM from "react-dom/client";
 
 function Card(props){
     return (
-        <div style = {{border: "2px solid black", width: "200px", margin: "auto"}}>
-            <img src={props.img} height ="200px" width="200px" />
-            <div style= {{textAlign: "center"}}>
+        <div className="card">
+            <img src={props.img} alt={props.cloth} />
+            <div>
                 <h2>{props.cloth}</h2>
                 <p>{props.offer}</p>
                 <p>{props.cta}</p>
-                <p>{props.link}</p>
             </div>
-            
         </div>
     )
 }
+
+function Header(){
+  return (
+    <div className="heading">
+  <img className="images" src="https://logos-world.net/wp-content/uploads/2021/02/New-Myntra-Logo.png" height="50px" width="100px" />
+
+  <div className="options">
+    <button className="but">Men</button>
+    <button className="but">Women</button>
+    <button className="but">Kids</button>
+    <button className="but">Home & Living</button>
+    <button className="but">Beauty</button>
+    <button className="but">Studio</button>
+
+    <input className="searchbar" type="text" placeholder="Search for products, brands and more" />
+
+    <div className="Profile">
+      <button className="pro">Profile</button>
+      <button className="pro">Wishlist</button>
+      <button className="pro">Bag</button>
+      </div>
+      </div>
+    </div>
+  )
+}
+
+function Footer(){
+
+  return (
+    <>
+    <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2026/JANUARY/8/qNxGIxpW_381ee4c85bc84320855964d7bf8e27bd.jpg" height="300px" width="100%" alt="footerimage" />
+    <div className="footer">
+      <p>© 2024 Myntra. All rights reserved.</p>
+    </div>
+    </>
+  )
+}
+
+
   const arr = [
   {
     cloth: "T-Shirts",
@@ -123,13 +160,14 @@ function Card(props){
 
 
 
-
+//Main App Component, will contain Header, Body(Cards), Footer
 
 function App(){
     return (
-        //Header
-        //Body : Cards
-        <div style= {{display: "flex",  gap: "10px", flexWrap: "wrap"}}>
+      <>
+        <Header />
+        
+        <div className="Middle">
           {/* <Card cloth="T-Shirts" offer="40% Off" />
         <Card cloth="Jeans" offer="35% Off" />
         <Card cloth="Pants" offer="30% Off" />
@@ -161,10 +199,57 @@ function App(){
 
 
         </div>
-        //Footer
+
+        <Footer/> 
+       </>
     )
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<App />);
+
+
+
+//DId this in Day 5
+// this is not a good habit to write all components in a single file, better to create separate files for each component and import them where needed.
+// this is what we call methods or components reusability.
+// put Card, Header, Footer in separate javascsript files and import them here.
+//can keep main App component here in this file.
+
+//make a separate folder and keep the component files there for better project structure.
+//firstly, what's src
+//src is the source folder where all the source code of the project is kept.
+//in src, keep all the js files (myntra.js), can keep index.html here as well but keep outside for better structure.
+//in src, can also keep assets folder to keep images, css files, etc.
+//then make a components folder inside src to keep all the component files.
+//then make a styles folder inside src to keep all the css files.
+//then make an assets folder inside src to keep all the images and other assets.
+//this way, the project structure will be better and more organized.
+//no such hard and fast rules, just a good practice to follow for better project structure and maintainability.
+//not necessary that u name the component file with the same name as the component name, but it is a good practice to do so for better readability and maintainability.
+//e.g. Card component in Card.js file, Header component in Header.js file, Footer component in Footer.js file.
+//u gotta export the component from the component file and import it in the main file where u want to use it.
+//can use default export or named export for exporting the component.
+//default export is used when there is only one component in the file.
+//named export is used when there are multiple components in the file.
+//while importing, for default export, can use any name to import the component.
+//for named export, need to use the same name as the component name while importing, and need to use curly braces while importing named exports.
+
+//put dummy data in utils folder or data folder as a separate js file and import it here to use it.
+//this way, the project structure will be better and more organized.
+
+
+//cant use export default in front of let/const/var/function
+//only one export default allowed per file
+//for normal export, u gotta use curly braces while importing
+
+
+//use of react:
+//it does dom manipulation efficiently using virtual dom
+//it updates only the changed parts of the dom instead of reloading the entire dom
+//this makes the app faster and more efficient
+//and u can focus on ui and building the app rather than worrying about dom manipulation
+//react follows component based architecture
+//u can break the ui into small reusable components
+//this makes the code more manageable and easier to debug

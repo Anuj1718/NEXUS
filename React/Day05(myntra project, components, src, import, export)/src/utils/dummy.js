@@ -8,4 +8,9 @@ export function meet(){
     return <h1>Hello Bhaiya ji</h1>
 }
 
-export default arr;
+// export default arr;
+
+//cant use export default in front of let/const/var/function
+//only one export default allowed per file
+//for normal export, u gotta use curly braces while importing
+

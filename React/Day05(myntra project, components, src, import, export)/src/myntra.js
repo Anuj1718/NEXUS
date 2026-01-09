@@ -6,6 +6,8 @@ import Header from "./component/Header";
 import arr from "./utils/dummy"
 import {greet as goa, meet as roa} from "./utils/dummy"
 
+//for normal export, u gotta use curly braces while importing
+
 
 function App(){
   return(<>
