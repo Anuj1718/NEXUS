@@ -12,19 +12,20 @@ const element = React.createElement("h1",{},"Hello Coder Army");
 
 const Reactroot = ReactDOM.createRoot(document.getElementById('root'));
 // React root container: is
-Reactroot.render(element);
+Reactroot.render(element); // or directly ReactDOM.createRoot(document.getElementById('root')).render(element);
 //this is the new way to render the element in react 18
 
 
 //till react 17, if we clicked on a button it would re render the entire app i.e agar ek button pe click kiya to jab tak pura data render nai ho jata mai dusre button par click nai kar sakta tha, response nai karta tha kyuki wo single threaded hai
-//but in react 18, it will only re render the component which is changed
+//but in react 18, it will only re render the component which is changed, now the Reactroot has power over the root,  jo deprecate hua usme root ka access khud ke paas tha
 //this is called concurrent rendering
 //it improves the performance of the app
 
 //ReactDom.render is still available in react 18 for backward compatibility but it is not recommended to use it
-//say element mai 50 card pade hue hai ReactDOm.render mai wo 50 cards ka control element pe hai
+//say element mai 50 card pade hue hai ReactDOm.render mai wo 50 cards ka control root pe hai
 //jabki createRoot mai control react pe hai islye if we click on a button it will only re render the component which is changed not the entire app
 //this is the main difference between ReactDOM.render and createRoot
+//agar 50 card mai se 15 card display hore aur mai kisi aur button pe click karu to purana react sare 50 card display karta fir button change ko respond karta jabki new react mai button response ko pehle karega
 
 //this is not multi threading, react is still single threaded
 //but it uses time slicing to split the rendering work into smaller chunks and spread it over multiple frames

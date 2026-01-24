@@ -1,6 +1,6 @@
 
 // import React from "react";
-// import ReactDOM from "react-dom/client"
+// import ReactDOM from "react-dom/client" //old way: import ReactDOM from "react-dom"
 
 //index.html (i mean the app.js part) wasnt working so we imported react and react-dom from node_modules, but then wasnt working again so we put type module in script tag of index.html
 // import is a part of new ES6 Module System, hence it's not norml JS, it is of type module so add this in index.html
@@ -59,6 +59,7 @@ Reactroot.render(div1);
 //JSX looks like HTML code, but it is not HTML, it is JS code
 //Babel will convert this JSX code into React.createElement code
 // jsx is not part of react, it is a syntax extension of JS
+//facebook devs didnt create jsx, it is created by other devs, but facebook adopted it and made it popular by using it in react
 
 const newElement = <h1> Hello Coder Army </h1>
 Reactroot.render(newElement);
@@ -83,6 +84,8 @@ Reactroot.render(newElement);
 // JSX => React.createElement() => gives react element(i.e JSObject) => HTML Element
 
 //babel is already integrated with parcel, so we dont have to do anything extra to use babel with parcel, can verify in node_modules folder and see babel related packages
+//no need to install babel separately, comes bundled with parcel
+
 
 //jsx ke andar js ke expression bhi likh sakte ho, bas {} ke andar likhna hai
 // JSX: JS ke expression
@@ -99,11 +102,12 @@ Reactroot.render(newElement);
 // }
 
 
-//what if i wanna write multiple elements, wrap em in div as newElement wants single element
+//what if i wanna write multiple elements, use ( ) these brackets to wrap em in div as newElement expects single element
+//bina brackets ke bhi chalega, but better to use brackets for multiple lines for better readability
 // // React ELement
 // // const newElement = (
 // //     <div>
-// //          <h1 id="first" className="second" >Hello Coder Army {names}</h1> //write className instead of class as class is reserved word in JS, one difference from HTML
+// //          <h1 id="first" className="second" >Hello Coder Army {names}</h1> //write className instead of class as class is reserved word in JS, one difference bw html and jsx
 // //          <h2 style={{backgroundColor:"black",color:"white"}}>Maja aaya muje {obj.age}</h2>
 // //     </div>
 // // ) //will work without brackets also

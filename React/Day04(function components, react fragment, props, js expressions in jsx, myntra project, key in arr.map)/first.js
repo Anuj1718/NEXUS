@@ -67,7 +67,9 @@ root.render(greet3());
 //arrays are expressions, so we can put them directly inside curly braces.
 //when we put an array inside curly braces, it will be converted to a string by joining all the elements with a comma.
 //but if we put an object inside an array, it will give an error because object is a statement not an expression.
-//array should contain only expressions.
+//array should contain only expressions. (number, string, boolean, array etc.)
+//array can even contain jsx elements also and it will render them correctly.
+// const arr2 = [<h3>Rohit</h3>, <h3>Anuj</h3>, <h3>Sumit</h3>];
 
 //other ways to call function inside jsx
 

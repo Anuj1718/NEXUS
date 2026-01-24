@@ -1,8 +1,10 @@
 vite
+<!-- vite.dev  -->
 npm create vite@latest
 
+will ask name of project, give any name you want, e.g., vite-project, and press enter.
 it will automatically prompt you to select a framework and variant. Choose "React" and "JavaScript" respectively.
-you will see it will automatically create a project folder with the necessary files and configurations for a React application even index.html, main.jsx, App.jsx, and vite.config.js.
+you will see it will automatically create a project folder with the necessary files and configurations for a React application even index.html, main.jsx, App.jsx, and vite.config.js. even package.json file with scripts and dependencies which we were making manually earlier
 
 where is js files located in vite project?
 The JavaScript files in a Vite project are typically located in the "src" folder.
@@ -13,6 +15,7 @@ to see which is the main file, check src tag in index.html file or main file in 
 
 to install dependencies and get node-modules folder, run the following command in your project directory:
 npm install
+<!-- make sure u type it in correct project folder in terminal. i.e inside vite-project folder in this case.  -->
 
 dependencies are of two types:
 1. dependencies: These are the packages required for your application to run in production. They are listed under the "dependencies" section in your package.json file. Examples include React, ReactDOM, etc.
