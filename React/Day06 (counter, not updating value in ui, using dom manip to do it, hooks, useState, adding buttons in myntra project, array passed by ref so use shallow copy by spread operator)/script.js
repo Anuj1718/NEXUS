@@ -61,8 +61,26 @@ ReactDOM.createRoot(document.getElementById('root')).render(<Counter/>)
 //when we call the setCount function, react knows that the state has changed
 //and it re renders the component, updating the UI with the new state value
 
+
+// useState bolta initialise mai karunga count ko
+// useState returns an array, first variable aur 2nd ek function (can name anything, preferrably set + var name), aur ye jo 0 hai wo jayega is variable count ke andar, aur bolta jab bhi ye variable count change, bas mujhe call kar dena aur jo new value aayi hai count ki use mere andar dal dena i.e updated value dalna
+
+
+// ab jaha bhi count use kara hoga waha sab jagah update kar dega
+
+
+// when u increment, useState(count) again calls counter fn and the count var inside the array becomes 1 and sab jagah count = 1 hoga
+
+
+// useState wahi new value lega jo setCount bhejega
+
+
+// cant put useState in conditional statements
+
 //every time the state changes, the entire component function is re executed
 //react then compares the new virtual DOM with the previous one and updates only the parts that have changed in the actual DOM
+
+
 
 //value change hori yane state change hori
 //jab state change hoti hai to component re render hota hai

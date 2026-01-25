@@ -19,6 +19,7 @@ function Colorful({name}){
         // console.log(name);
         console.log("First");
         // useEffect(Callback Function, dependency)
+        //useEffect (() =>{}, [ ])
     
         useEffect(()=>{
             console.log("UseEffect Executed");
