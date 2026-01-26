@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div id="root">
+
+        <!-- <nav>
+            <a href="./index.html"> Home </a>
+            <a href="./about.html"> About </a>
+            <a href="./contact.html"> Contact </a>
+            <a href="./detail.html"> Detail </a>
+        </nav>
+
+        <h1> My Home Page</h1> -->
+    </div>
+
+    <script type="module" src="./first.js"></script>
+</body>
+</html>
+
+<!-- 
+ when i click on Home or About or Contact or Detail it should go to respective pages, it refreshes the whole page. -->
+ 
+<!-- when u use the old way, page reloads cuz when u go to another html page, browser makes a request to server to fetch that page, so it reloads the whole page.
+when u click on About, purani index.html file hat jati hai, new about.html file aajati hai. -->
+<!-- But if u go to react.dev site and click on Learn react it opens a new page without refreshing the whole page. How to achieve this? -->
+<!-- cuz they have only 1 html file and the other content they are changing dynamically using javascript. So the browser is not making a new request to server to fetch a new html page, it is just changing the content of the existing html page using javascript. So the page does not reload. This is called Single Page Application(SPA). React is used to make SPA. -->
+ <!-- reload happens when a new html file is requested from the server. In SPA, only 1 html file is there and other content is changed dynamically using javascript without making new requests to server. So no page reload happens. -->
+<!-- dom manipulation doesnt let page to reload. React uses virtual DOM to manipulate the real DOM. So react apps are SPA and page doesnt reload. -->
+
+ <!-- what is routing in react? -->
+<!-- Routing is a process of navigating between different pages in a web application. In react, routing is done using react-router-dom library. It provides Link component to navigate between different pages without reloading the whole page. -->
+<!-- Link component is used instead of anchor tag. Anchor tag makes a new request to server to fetch a new html page, so it reloads the whole page. But Link component changes the content of the existing html page using javascript without making new requests to server. So the page does not reload. --> -->
