@@ -36,6 +36,9 @@ function App(){
             </Route>
 
             <Route path="/Github/:name" element={<Github></Github>}></Route>
+            {/* :name is a route parameter that can be accessed using useParams hook in the Github component.  */}
+            {/* useParams hook allows us to extract the value of the name parameter from the URL.  */}
+            {/* This value is then used to fetch the corresponding GitHub user data from the GitHub API. */}
         </Routes>
 
 
