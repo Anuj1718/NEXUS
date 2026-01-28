@@ -26,7 +26,7 @@ function App(){
 // react uses virtual dom to optimize updates to real dom
 // when state or props change, react creates a new virtual dom and compares it with the previous one (diffing)
 // it then calculates the minimum number of changes needed to update the real dom (reconciliation)
-// this makes updates faster and more efficient
+// this makes updates faster and more efficient.
     const VDom = <h1>Hello Coder Army</h1>
 
     const RDom = document.createElement('h1');
